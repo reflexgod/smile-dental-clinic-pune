@@ -4,28 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Riya — AI Receptionist for Dental Clinics</title>
-  <meta name="description" content="Interactive AI receptionist demo for dental clinics. Answers patient questions 24/7 and collects appointment requests." />
-  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="AI Receptionist for Dental Clinics. Answers patient questions 24/7 and collects appointment requests." />
+  <meta name="theme-color" content="#F5F4EF" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://viraaj19.app.n8n.cloud; base-uri 'self'; form-action 'self'; object-src 'none'" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="canonical" href="https://reflexgod.github.io/smile-dental-clinic-pune/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
   <link rel="stylesheet" href="assets/vendor/n8n-chat/style.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
   <script type="module" src="assets/js/chat.js"></script>
 </head>
 <body>
-  <div class="app-shell">
-    <header class="app-header">
+  <div class="workspace">
+    <header class="topbar">
       <h1>AI Receptionist for Dental Clinics</h1>
-      <p>Answers patient questions 24/7 and collects appointment requests.</p>
+      <p class="topbar__subtitle">Answers patient questions 24/7 and collects appointment requests.</p>
     </header>
 
-    <main class="chat-stage" aria-label="Chat with Riya">
-      <div id="n8n-chat" class="chat-frame"></div>
+    <main class="panel" aria-label="Conversation with Riya">
+      <div class="network-banner" data-network-banner hidden role="status" aria-live="polite">
+        <span data-network-message>Unable to reach the clinic assistant right now.</span>
+        <button type="button" class="network-banner__action" data-network-dismiss>Dismiss</button>
+      </div>
+
+      <div id="n8n-chat" class="chat-mount"></div>
+
+      <!-- Injected into the participant bar (.chat-header) -->
+      <div class="header-controls" data-header-controls>
+        <span class="status-indicator" data-connection-status>
+          <span class="status-indicator__dot" aria-hidden="true"></span>
+          <span data-connection-label>Online</span>
+        </span>
+        <button type="button" class="reset-btn" data-reset-chat title="Clear and restart conversation">
+          Reset
+        </button>
+      </div>
+
+      <!-- Injected into the conversation stream below Riya's opening message -->
+      <div class="starter-group" data-quick-prompts aria-label="Suggested enquiries">
+        <p class="starter-group__label">Suggested enquiries</p>
+        <div class="starter-group__items">
+          <button type="button" class="prompt-chip" data-prompt="What are your charges for a routine check-up and teeth cleaning?">
+            Check-up &amp; cleaning fees
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="I'd like to request an appointment for tomorrow evening.">
+            Request an appointment
+          </button>
+          <button type="button" class="prompt-chip" data-prompt="Do you offer root canal treatment and braces consultations?">
+            Root canal &amp; braces
+          </button>
+        </div>
+      </div>
     </main>
   </div>
 </body>

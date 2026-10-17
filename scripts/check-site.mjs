@@ -40,7 +40,7 @@ check(
   'Header text "AI Receptionist for Dental Clinics" is present'
 );
 check(
-  html.includes('<p>Answers patient questions 24/7 and collects appointment requests.</p>'),
+  html.includes('Answers patient questions 24/7 and collects appointment requests.'),
   'Subtitle text is present'
 );
 check(html.includes('id="n8n-chat"'), '#n8n-chat container is present');
@@ -61,3 +61,4 @@ if (failures > 0) {
   process.exit(1);
 }
 console.log('\nAll checks passed.');
+
