@@ -1,7 +1,7 @@
 /**
- * Smile Dental Clinic, Pune — Primary UI Interactions
- * Handles mobile navigation, treatment discipline tabs, FAQ accordion,
- * and appointment request form handoff to Riya.
+ * Smile Dental Clinic, Pune — Primary Website Interactions
+ * Handles mobile menu drawer, treatment service pre-selection, FAQ accordion,
+ * and appointment request form confirmation + handoff to Riya.
  */
 
 function initMobileNavigation() {
@@ -32,69 +32,13 @@ function initMobileNavigation() {
   });
 }
 
-function initTreatmentTabs() {
-  const tabs = Array.from(document.querySelectorAll('[data-treatment-tab]'));
-  const panels = Array.from(document.querySelectorAll('[data-treatment-panel]'));
-  if (!tabs.length || !panels.length) return;
-
-  const activateTab = (targetKey, shouldFocus = false) => {
-    tabs.forEach((tab) => {
-      const isMatch = tab.getAttribute('data-treatment-tab') === targetKey;
-      tab.classList.toggle('is-active', isMatch);
-      tab.setAttribute('aria-selected', String(isMatch));
-      tab.setAttribute('tabindex', isMatch ? '0' : '-1');
-      if (isMatch && shouldFocus) {
-        tab.focus();
-      }
-    });
-
-    panels.forEach((panel) => {
-      const isMatch = panel.getAttribute('data-treatment-panel') === targetKey;
-      panel.classList.toggle('is-active', isMatch);
-      panel.hidden = !isMatch;
-    });
-  };
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-      activateTab(tab.getAttribute('data-treatment-tab'), false);
-    });
-
-    tab.addEventListener('keydown', (event) => {
-      let nextIndex = null;
-      if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
-        nextIndex = (index + 1) % tabs.length;
-      } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
-        nextIndex = (index - 1 + tabs.length) % tabs.length;
-      } else if (event.key === 'Home') {
-        nextIndex = 0;
-      } else if (event.key === 'End') {
-        nextIndex = tabs.length - 1;
-      }
-
-      if (nextIndex !== null) {
-        event.preventDefault();
-        const nextKey = tabs[nextIndex].getAttribute('data-treatment-tab');
-        activateTab(nextKey, true);
-      }
-    });
-  });
-
-  // Footer quick links to specific treatment tabs
-  document.querySelectorAll('[data-trigger-tab]').forEach((link) => {
+function initServiceSelectionLinks() {
+  document.querySelectorAll('[data-select-service]').forEach((link) => {
     link.addEventListener('click', () => {
-      const key = link.getAttribute('data-trigger-tab');
-      if (key) activateTab(key, false);
-    });
-  });
-
-  // Pre-select treatment option in appointment form when clicking "Request [Service] Slot"
-  document.querySelectorAll('[data-select-service]').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const serviceValue = btn.getAttribute('data-select-service');
+      const value = link.getAttribute('data-select-service');
       const selectEl = document.getElementById('patient-service');
-      if (selectEl && serviceValue) {
-        selectEl.value = serviceValue;
+      if (selectEl && value) {
+        selectEl.value = value;
       }
     });
   });
@@ -119,6 +63,7 @@ function initFaqAccordion() {
 function initAppointmentRequestForm() {
   const form = document.getElementById('appointment-request-form');
   const errorEl = document.getElementById('form-error');
+  const confirmEl = document.getElementById('form-confirmation');
   if (!form) return;
 
   form.addEventListener('submit', (event) => {
@@ -126,12 +71,13 @@ function initAppointmentRequestForm() {
     const formData = new FormData(form);
     const name = String(formData.get('name') || '').trim();
     const phone = String(formData.get('phone') || '').trim();
-    const service = String(formData.get('service') || 'General Checkup & Consultation').trim();
+    const service = String(formData.get('service') || 'General Checkup & Teeth Cleaning').trim();
     const preferredWindow = String(formData.get('window') || '').trim();
     const notes = String(formData.get('notes') || '').trim();
 
     if (!name || !phone) {
       if (errorEl) errorEl.hidden = false;
+      if (confirmEl) confirmEl.hidden = true;
       const firstEmpty = !name
         ? document.getElementById('patient-name')
         : document.getElementById('patient-phone');
@@ -140,11 +86,12 @@ function initAppointmentRequestForm() {
     }
 
     if (errorEl) errorEl.hidden = true;
+    if (confirmEl) confirmEl.hidden = false;
 
     const parts = [
-      `Hi Riya, I'd like to request an appointment at Smile Dental Clinic, Pune.`,
+      `Hi Riya, I would like to request an appointment.`,
       `Name: ${name}`,
-      `Phone: ${phone}`,
+      `Contact: ${phone}`,
       `Treatment: ${service}`,
     ];
     if (preferredWindow) {
@@ -165,7 +112,7 @@ function initAppointmentRequestForm() {
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileNavigation();
-  initTreatmentTabs();
+  initServiceSelectionLinks();
   initFaqAccordion();
   initAppointmentRequestForm();
 });

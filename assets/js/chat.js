@@ -71,13 +71,13 @@ function syncLauncherState() {
   setAttrIfChanged(
     toggleBtn,
     'aria-label',
-    open ? 'Minimize chat with Riya' : 'Chat with Riya, AI dental receptionist'
+    open ? 'Minimize chat with Riya' : 'Chat with Riya, virtual dental receptionist'
   );
 
   const titleEl = toggleBtn.querySelector('.riya-launcher-title');
   const subEl = toggleBtn.querySelector('.riya-launcher-sub');
-  setTextIfChanged(titleEl, open ? 'Close Riya Chat' : 'Chat with Riya');
-  setTextIfChanged(subEl, open ? 'ESC TO MINIMIZE' : 'ONLINE 24/7 · AI DESK');
+  setTextIfChanged(titleEl, open ? 'Close Chat' : 'Chat with Riya');
+  setTextIfChanged(subEl, open ? 'ESC TO MINIMIZE' : 'VIRTUAL RECEPTIONIST');
 }
 
 function decorateFloatingWidget() {
@@ -98,12 +98,12 @@ function decorateFloatingWidget() {
       launcherMarkup.className = 'riya-launcher-inner';
       launcherMarkup.innerHTML = `
         <span class="riya-launcher-avatar" aria-hidden="true">
-          <img src="./assets/mascot-riya.svg" alt="" width="36" height="36" />
+          <img src="./assets/mascot-riya.svg" alt="" width="34" height="34" />
           <span class="riya-launcher-dot"></span>
         </span>
         <span class="riya-launcher-copy">
           <span class="riya-launcher-title">Chat with Riya</span>
-          <span class="riya-launcher-sub">ONLINE 24/7 · AI DESK</span>
+          <span class="riya-launcher-sub">VIRTUAL RECEPTIONIST</span>
         </span>
       `;
       toggleBtn.appendChild(launcherMarkup);
@@ -310,7 +310,7 @@ function initRiyaChat() {
     i18n: {
       en: {
         title: `Chat with ${ASSISTANT_NAME}`,
-        subtitle: 'Smile Dental Clinic, Pune · Replies in seconds',
+        subtitle: 'Smile Dental Clinic, Pune · Virtual Receptionist',
         footer: '',
         getStarted: 'Start Conversation',
         inputPlaceholder: 'Ask Riya a question or request a visit time...',

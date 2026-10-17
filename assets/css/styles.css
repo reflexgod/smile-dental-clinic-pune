@@ -1,100 +1,73 @@
 /* ==========================================================================
-   SMILE DENTAL CLINIC, PUNE — ARCHITECTURAL EDITORIAL DESIGN SYSTEM
-   Inspired by contemporary hospitality-led dentistry (Canary Dental ethos)
+   SMILE DENTAL CLINIC, PUNE — EDITORIAL BRAND DESIGN SYSTEM
+   Crafted with human warmth, tactile paper & sage tones, and real photography
    ========================================================================== */
 
 :root {
-  /* Architectural Palette */
-  --bg-plaster: #F7F3EB;
-  --bg-sand: #EFE9DD;
-  --bg-warm: #F3EDE1;
-  --bg-paper: #FCFBF7;
-  --bg-navy: #112230;
-  --bg-navy-soft: #182E40;
+  /* Warm Clinic Interior Palette */
+  --bg-cream: #F6EFE3;
+  --bg-paper: #FFFDF9;
+  --bg-almond: #EFE7D8;
+  --bg-sage-tint: #DCE7E5;
+  --bg-charcoal: #182226;
 
-  /* Ink & Typography Colours */
-  --ink-900: #112230;
-  --ink-700: #2F414F;
-  --ink-500: #566672;
-  --ink-400: #768590;
-  --ink-on-navy: #F7F3EB;
-  --ink-on-navy-muted: #C2CED6;
+  /* Ink & Text Hierarchy */
+  --ink-900: #182226;
+  --ink-700: #37454A;
+  --ink-500: #5E6D72;
+  --ink-400: #7B898E;
 
-  /* Clinical Teal & Warm Brass Accents */
+  /* Brand Accents */
   --teal-700: #14544D;
   --teal-600: #1B6B63;
-  --teal-500: #238379;
-  --teal-200: #C8E2DD;
-  --teal-100: #E4F0EE;
-  --brass-500: #C6975B;
-  --status-online: #1F8A5B;
+  --teal-200: #CBE0DC;
+  --clay-600: #C47D62;
+  --clay-300: #E7BFB0;
+  --sand-400: #D8C7AE;
+  --online-green: #21885E;
   --danger-700: #9E2A2B;
   --danger-100: #FBE9E9;
 
-  /* Borders & Hairlines */
-  --border-hairline: #DDD5C5;
-  --border-strong: #C5BBA7;
-  --border-navy: rgba(247, 243, 235, 0.16);
+  /* Architectural Hairlines */
+  --line-ink: #182226;
+  --line-mid: #C6BCA8;
+  --line-subtle: #DED5C4;
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
-  /* Geometry & Rhythm */
+  /* Layout & Spacing */
+  --container-max: 1220px;
   --radius-xs: 4px;
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --container-max: 1240px;
-  --shadow-subtle: 0 12px 32px -12px rgba(17, 34, 48, 0.08);
-  --shadow-floating: 0 22px 48px -12px rgba(17, 34, 48, 0.22);
+  --radius-sm: 8px;
+  --radius-md: 12px;
 
   /* Official @n8n/chat variable overrides */
   --chat--color-primary: #1B6B63;
-  --chat--color-primary-shade-50: #155650;
+  --chat--color-primary-shade-50: #155750;
   --chat--color-primary-shade-100: #10423D;
-  --chat--color-secondary: #112230;
-  --chat--color-secondary-shade-50: #182E40;
-  --chat--color-white: #FCFBF7;
-  --chat--color-light: #F7F3EB;
-  --chat--color-light-shade-50: #EFE9DD;
-  --chat--color-light-shade-100: #DDD5C5;
-  --chat--color-medium: #C5BBA7;
-  --chat--color-dark: #112230;
-  --chat--color-disabled: #768590;
-  --chat--color-typing: #566672;
-  --chat--spacing: 1rem;
-  --chat--border-radius: 10px;
-  --chat--transition-duration: 0.2s;
-  --chat--window--width: 400px;
-  --chat--window--height: 600px;
-  --chat--window--bottom: 24px;
-  --chat--window--right: 24px;
+  --chat--color-secondary: #182226;
+  --chat--color-secondary-shade-50: #233136;
+  --chat--color-white: #FFFDF9;
+  --chat--color-light: #F6EFE3;
+  --chat--color-light-shade-50: #EFE7D8;
+  --chat--color-light-shade-100: #DED5C4;
+  --chat--color-medium: #C6BCA8;
+  --chat--color-dark: #182226;
+  --chat--color-disabled: #7B898E;
+  --chat--color-typing: #5E6D72;
+  --chat--window--width: 396px;
+  --chat--window--height: 590px;
+  --chat--window--bottom: 22px;
+  --chat--window--right: 22px;
   --chat--window--z-index: 950;
-  --chat--window--border: 1px solid #C5BBA7;
+  --chat--window--border: 1px solid #182226;
   --chat--window--border-radius: 12px;
-  --chat--header-height: auto;
-  --chat--header--padding: 14px 16px;
-  --chat--header--background: #112230;
-  --chat--header--color: #F7F3EB;
-  --chat--textarea--height: 52px;
-  --chat--message--padding: 12px 15px;
-  --chat--message--border-radius: 10px;
-  --chat--message--line-height: 1.55;
-  --chat--message--bot--background: #FCFBF7;
-  --chat--message--bot--color: #112230;
-  --chat--message--bot--border: 1px solid #DDD5C5;
-  --chat--message--user--background: #112230;
-  --chat--message--user--color: #F7F3EB;
-  --chat--toggle--size: 58px;
-  --chat--toggle--background: #112230;
-  --chat--toggle--hover--background: #1B6B63;
-  --chat--toggle--active--background: #14544D;
-  --chat--toggle--color: #F7F3EB;
 }
 
-/* Reset & Base */
+/* Reset */
 *,
 *::before,
 *::after {
@@ -105,8 +78,8 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
-  background-color: var(--bg-plaster);
+  scroll-padding-top: 86px;
+  background-color: var(--bg-paper);
   color: var(--ink-900);
   font-family: var(--font-sans);
   font-size: 16px;
@@ -116,7 +89,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-plaster);
+  background-color: var(--bg-paper);
   color: var(--ink-900);
   overflow-x: hidden;
 }
@@ -150,18 +123,17 @@ ol {
   display: none !important;
 }
 
-/* Accessibility Skip Link */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 16px;
   z-index: 2000;
-  background: var(--bg-navy);
-  color: var(--ink-on-navy);
+  background: var(--ink-900);
+  color: var(--bg-paper);
   padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
+  border-radius: var(--radius-xs);
   font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .skip-link:focus {
@@ -173,7 +145,6 @@ ol {
   outline-offset: 2px;
 }
 
-/* Layout Container */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -182,68 +153,15 @@ ol {
 }
 
 /* ==========================================================================
-   TOP DISCLOSURE & STUDIO UTILITY BAR
-   ========================================================================== */
-.utility-bar {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
-  font-size: 0.78rem;
-  border-bottom: 1px solid rgba(247, 243, 235, 0.12);
-}
-
-.utility-bar__inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding-block: 0.55rem;
-  flex-wrap: wrap;
-}
-
-.utility-bar__disclosure {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  color: var(--ink-on-navy-muted);
-}
-
-.utility-bar__tag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background-color: rgba(91, 196, 184, 0.16);
-  color: #8CE0D6;
-  border: 1px solid rgba(91, 196, 184, 0.35);
-  padding: 0.15rem 0.45rem;
-  border-radius: var(--radius-xs);
-  font-weight: 500;
-}
-
-.utility-bar__meta {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--ink-on-navy-muted);
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-}
-
-.utility-bar__sep {
-  opacity: 0.4;
-}
-
-/* ==========================================================================
-   STICKY ARCHITECTURAL HEADER & NAVIGATION
+   HEADER & NAVIGATION (Starts cleanly at top — no announcement strip)
    ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 800;
-  background-color: rgba(247, 243, 235, 0.94);
+  background-color: rgba(255, 253, 249, 0.96);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--line-subtle);
 }
 
 .site-header__inner {
@@ -251,145 +169,114 @@ ol {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  min-height: 74px;
+  min-height: 82px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-}
-
-.brand__emblem {
-  width: 36px;
-  height: 36px;
+  gap: 0.7rem;
   flex-shrink: 0;
 }
 
-.brand__text {
+.brand__mark {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.brand__wordmark {
   display: flex;
   flex-direction: column;
-  line-height: 1.15;
+  line-height: 1.05;
 }
 
 .brand__name {
-  font-family: var(--font-display);
-  font-size: 1.125rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ink-900);
 }
 
-.brand__location {
+.brand__sub {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
   color: var(--ink-500);
-  margin-top: 2px;
-}
-
-.brand--light .brand__name {
-  color: var(--ink-on-navy);
-}
-
-.brand--light .brand__location {
-  color: var(--ink-on-navy-muted);
+  margin-top: 3px;
 }
 
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: 1.65rem;
+  gap: clamp(1rem, 1.45vw, 1.5rem);
 }
 
 .site-nav__link {
-  font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--ink-700);
-  padding-block: 0.35rem;
-  position: relative;
-  transition: color 0.18s ease;
-}
-
-.site-nav__link::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1.5px;
-  background-color: var(--teal-600);
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform 0.22s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-900);
+  white-space: nowrap;
+  padding-block: 0.3rem;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.18s ease, color 0.18s ease;
 }
 
 .site-nav__link:hover,
 .site-nav__link:focus-visible {
-  color: var(--ink-900);
-}
-
-.site-nav__link:hover::after {
-  transform: scaleX(1);
+  color: var(--teal-600);
+  border-bottom-color: var(--teal-600);
 }
 
 .site-header__actions {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.75rem;
+  flex-shrink: 0;
 }
 
-/* Header Riya Quick Trigger */
-.btn-riya-header {
+.header-riya-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  padding: 0.38rem 0.75rem 0.38rem 0.48rem;
-  font-size: 0.84rem;
+  background-color: transparent;
+  border: none;
+  padding: 0.45rem 0.65rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--ink-900);
   white-space: nowrap;
-  flex-shrink: 0;
   cursor: pointer;
-  transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.18s ease;
+  border-radius: var(--radius-xs);
+  transition: background-color 0.18s ease;
 }
 
-.btn-riya-header:hover {
-  background-color: var(--teal-100);
-  border-color: var(--teal-600);
+.header-riya-btn:hover {
+  background-color: var(--bg-cream);
 }
 
-.btn-riya-header__mascot {
+.header-riya-btn__icon {
   width: 24px;
   height: 24px;
 }
 
-.btn-riya-header__dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--status-online);
-}
-
-/* Buttons — Architectural Rectangular Geometry (No Pill Clichés) */
+/* Tactile Brand Buttons (Inspired by Canary Dental's ink-bordered soft-fill buttons) */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.55rem;
-  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
   font-weight: 600;
   line-height: 1.2;
-  padding: 0.85rem 1.35rem;
+  padding: 0.88rem 1.55rem;
   border-radius: var(--radius-sm);
-  border: 1px solid transparent;
+  border: 1px solid var(--line-ink);
   cursor: pointer;
-  transition: background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
   white-space: nowrap;
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.15s ease;
 }
 
 .btn:active {
@@ -397,80 +284,88 @@ ol {
 }
 
 .btn--sm {
-  padding: 0.55rem 0.95rem;
-  font-size: 0.84rem;
+  padding: 0.62rem 1.15rem;
+  font-size: 0.85rem;
 }
 
 .btn--full {
   width: 100%;
 }
 
-.btn--primary {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
-  border-color: var(--bg-navy);
-}
-
-.btn--primary:hover {
-  background-color: var(--teal-600);
-  border-color: var(--teal-600);
-}
-
-.btn--secondary {
-  background-color: var(--bg-paper);
+.btn--sage {
+  background-color: var(--bg-sage-tint);
   color: var(--ink-900);
-  border-color: var(--border-strong);
+  border-color: var(--line-ink);
 }
 
-.btn--secondary:hover {
-  background-color: var(--teal-100);
-  border-color: var(--teal-600);
+.btn--sage:hover {
+  background-color: var(--ink-900);
+  color: var(--bg-paper);
+}
+
+.btn--clay {
+  background-color: var(--clay-300);
+  color: var(--ink-900);
+  border-color: var(--line-ink);
+}
+
+.btn--clay:hover {
+  background-color: var(--ink-900);
+  color: var(--bg-paper);
 }
 
 .btn--outline {
-  background-color: transparent;
+  background-color: var(--bg-paper);
   color: var(--ink-900);
-  border-color: var(--border-strong);
+  border-color: var(--line-ink);
 }
 
 .btn--outline:hover {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
-  border-color: var(--bg-navy);
+  background-color: var(--bg-cream);
 }
 
-.btn--teal {
-  background-color: var(--teal-600);
-  color: var(--ink-on-navy);
-  border-color: var(--teal-600);
+.btn--text-underline {
+  background: transparent;
+  border: none;
+  padding: 0.5rem 0.25rem;
+  border-radius: 0;
+  color: var(--ink-900);
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--line-ink);
 }
 
-.btn--teal:hover {
-  background-color: var(--teal-700);
+.btn--text-underline:hover {
+  color: var(--teal-600);
+  border-bottom-color: var(--teal-600);
 }
 
-.btn--teal-light {
-  background-color: #217D74;
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.22);
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  border-bottom: 1.5px solid var(--line-ink);
+  padding: 0 0 2px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-900);
+  cursor: pointer;
+  transition: color 0.16s ease, border-color 0.16s ease;
 }
 
-.btn--teal-light:hover {
-  background-color: #289489;
+.text-link:hover {
+  color: var(--teal-600);
+  border-bottom-color: var(--teal-600);
 }
 
-.btn__mascot-icon {
-  width: 22px;
-  height: 22px;
-}
-
-/* Mobile Menu Button & Drawer */
+/* Mobile Menu Toggle & Drawer */
 .nav-toggle {
   display: none;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--line-ink);
+  border-radius: var(--radius-xs);
   background: var(--bg-paper);
   align-items: center;
   justify-content: center;
@@ -479,956 +374,792 @@ ol {
   cursor: pointer;
 }
 
-.nav-toggle__line {
+.nav-toggle__bar {
   width: 18px;
   height: 1.8px;
   background-color: var(--ink-900);
   transition: transform 0.2s ease;
 }
 
-.nav-toggle[aria-expanded="true"] .nav-toggle__line:first-child {
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:first-child {
   transform: translateY(3.4px) rotate(45deg);
 }
 
-.nav-toggle[aria-expanded="true"] .nav-toggle__line:last-child {
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar:last-child {
   transform: translateY(-3.4px) rotate(-45deg);
 }
 
 .mobile-drawer {
   background-color: var(--bg-paper);
-  border-bottom: 1px solid var(--border-strong);
-  padding-block: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line-ink);
+  padding-block: 1.25rem 1.75rem;
 }
 
-.mobile-drawer__list {
+.mobile-drawer__links {
   display: grid;
-  gap: 0.25rem;
   margin-bottom: 1.25rem;
 }
 
-.mobile-drawer__link {
+.mobile-drawer__links a {
   display: block;
-  padding: 0.65rem 0.5rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  border-bottom: 1px solid var(--border-hairline);
-  color: var(--ink-900);
+  padding: 0.75rem 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--line-subtle);
 }
 
-.mobile-drawer__cta {
+.mobile-drawer__actions {
   display: grid;
   gap: 0.65rem;
 }
 
 /* ==========================================================================
-   1. ART-DIRECTED HERO SECTION
+   1. HERO SECTION — CANARY-INSPIRED ARCH & WARM CREAM BACKGROUND
    ========================================================================== */
 .hero {
-  padding-block: clamp(2.5rem, 6vw, 5rem) clamp(3.5rem, 7vw, 6rem);
-  border-bottom: 1px solid var(--border-hairline);
+  background-color: var(--bg-cream);
+  padding-block: clamp(2.75rem, 5.5vw, 4.75rem) clamp(3.5rem, 6.5vw, 5.5rem);
+  border-bottom: 1px solid var(--line-subtle);
 }
 
-.hero__grid {
+.hero__layout {
   display: grid;
-  grid-template-columns: 1.08fr 0.92fr;
-  gap: clamp(2rem, 4.5vw, 4.25rem);
-  align-items: start;
-}
-
-.eyebrow {
-  display: inline-flex;
+  grid-template-columns: 0.96fr 1.04fr;
+  gap: clamp(2.25rem, 5vw, 4.75rem);
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.1rem;
 }
 
-.eyebrow__index {
+.hero__arch-stage {
+  position: relative;
+  padding: 0 1.25rem 0 0;
+}
+
+.hero__stipple {
+  position: absolute;
+  right: 0;
+  bottom: 28px;
+  width: 82%;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__arch-figure {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__arch-mask {
+  border-radius: 260px 260px 6px 6px;
+  overflow: hidden;
+  border: 1px solid var(--line-mid);
+  background-color: var(--bg-almond);
+}
+
+.hero__arch-mask img {
+  width: 100%;
+  aspect-ratio: 4 / 3.2;
+  object-fit: cover;
+}
+
+.hero__photo-note {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: var(--ink-500);
+  line-height: 1.45;
+}
+
+.photo-disclosure-inline {
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal-600);
-  font-weight: 500;
-  border-left: 2px solid var(--teal-600);
-  padding-left: 0.65rem;
+  font-size: 0.7rem;
 }
 
-.hero__title {
-  font-family: var(--font-display);
-  font-size: clamp(2.35rem, 4.3vw, 3.85rem);
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-900);
+  margin-bottom: 0.9rem;
+}
+
+.hero__headline {
+  font-family: var(--font-serif);
+  font-size: clamp(2.45rem, 4.2vw, 3.75rem);
   font-weight: 400;
   line-height: 1.08;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: var(--ink-900);
   margin-bottom: 1.25rem;
 }
 
-.hero__title em {
-  font-style: italic;
-  font-weight: 400;
-  color: var(--teal-600);
-}
-
-.hero__lead {
-  font-size: clamp(1.02rem, 1.2vw, 1.14rem);
+.hero__copy {
+  font-size: clamp(1rem, 1.15vw, 1.1rem);
   color: var(--ink-700);
-  max-width: 56ch;
-  line-height: 1.68;
+  line-height: 1.7;
+  max-width: 54ch;
   margin-bottom: 1.85rem;
 }
 
-.hero__actions {
+.hero__cta-row {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-bottom: 2.4rem;
+  gap: 1.35rem;
+  margin-bottom: 2.25rem;
 }
 
-/* Signature Riya Mascot Concierge Card in Hero */
-.riya-concierge-card {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1.35rem;
-  box-shadow: var(--shadow-subtle);
-}
-
-.riya-concierge-card__header {
+.riya-inline-trigger {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1rem;
+  align-items: center;
+  gap: 0.95rem;
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--radius-sm);
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  transition: border-color 0.18s ease, background-color 0.18s ease;
 }
 
-.riya-avatar-wrap {
+.riya-inline-trigger:hover {
+  border-color: var(--line-ink);
+  background-color: #FFFFFF;
+}
+
+.riya-inline-trigger__avatar {
   position: relative;
-  width: 56px;
-  height: 56px;
+  width: 46px;
+  height: 46px;
   flex-shrink: 0;
-  background-color: var(--bg-sand);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-md);
+  background-color: var(--bg-cream);
+  border-radius: var(--radius-xs);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px;
+  padding: 3px;
 }
 
-.riya-avatar-wrap__img {
-  width: 48px;
-  height: 48px;
-  animation: riya-gentle-float 4.5s ease-in-out infinite;
-}
-
-.riya-avatar-wrap__badge {
+.riya-inline-trigger__dot {
   position: absolute;
-  bottom: -3px;
-  right: -3px;
-  width: 12px;
-  height: 12px;
+  bottom: -2px;
+  right: -2px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background-color: var(--status-online);
+  background-color: var(--online-green);
   border: 2px solid var(--bg-paper);
 }
 
-.riya-concierge-card__title-row {
+.riya-inline-trigger__body {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.3rem;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
-.riya-concierge-card__name {
-  font-family: var(--font-display);
-  font-size: 1.02rem;
+.riya-inline-trigger__body strong {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
   font-weight: 500;
   color: var(--ink-900);
 }
 
-.status-tag {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--teal-700);
-  background-color: var(--teal-100);
-  padding: 0.15rem 0.5rem;
-  border-radius: var(--radius-xs);
-  font-weight: 500;
-}
-
-.riya-concierge-card__quote {
-  font-size: 0.88rem;
+.riya-inline-trigger__body span {
+  font-size: 0.82rem;
   color: var(--ink-700);
-  line-height: 1.5;
-}
-
-.riya-concierge-card__prompts {
-  border-top: 1px solid var(--border-hairline);
-  padding-top: 0.85rem;
-}
-
-.riya-concierge-card__prompt-label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink-500);
-  margin-bottom: 0.5rem;
-}
-
-.riya-prompt-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-}
-
-.prompt-chip {
-  background-color: var(--bg-plaster);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-xs);
-  padding: 0.4rem 0.7rem;
-  font-size: 0.79rem;
-  font-weight: 500;
-  color: var(--ink-900);
-  cursor: pointer;
-  text-align: left;
-  transition: background-color 0.16s ease, border-color 0.16s ease, color 0.16s ease;
-}
-
-.prompt-chip:hover {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
-  border-color: var(--bg-navy);
-}
-
-/* Hero Visual Composition */
-.hero__visual {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: end;
-}
-
-.hero__main-frame {
-  grid-column: 2 / 13;
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-subtle);
-}
-
-.hero__main-frame img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.hero__caption {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem;
-  font-size: 0.78rem;
-  color: var(--ink-700);
-  border-top: 1px solid var(--border-hairline);
-  background-color: var(--bg-paper);
-}
-
-.hero__caption-num {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--teal-600);
-  font-weight: 500;
-  flex-shrink: 0;
-}
-
-.hero__inset-frame {
-  grid-column: 1 / 7;
-  margin-top: -8.5rem;
-  z-index: 2;
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: 0.55rem;
-  box-shadow: 0 18px 36px -14px rgba(17, 34, 48, 0.18);
-}
-
-.hero__inset-frame img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: var(--radius-sm);
-}
-
-.hero__inset-caption {
-  font-size: 0.74rem;
-  line-height: 1.4;
-  color: var(--ink-700);
-  padding: 0.55rem 0.25rem 0.15rem;
+  line-height: 1.45;
 }
 
 /* ==========================================================================
-   COMMON SECTION TYPOGRAPHY & RHYTHM
+   2. EDITORIAL MANIFESTO BAND (CANARY-STYLE CENTERED QUOTE)
+   ========================================================================== */
+.manifesto-band {
+  background-color: var(--bg-paper);
+  padding-block: clamp(4.25rem, 8vw, 6.75rem);
+  border-bottom: 1px solid var(--line-subtle);
+}
+
+.manifesto-band__inner {
+  max-width: 920px;
+  text-align: center;
+}
+
+.manifesto-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  font-weight: 400;
+  line-height: 1.32;
+  letter-spacing: -0.015em;
+  color: var(--ink-900);
+  margin-bottom: 2rem;
+}
+
+.manifesto-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-bottom: 0.9rem;
+}
+
+.manifesto-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.manifesto-dot--sage {
+  background-color: #B8CED6;
+}
+
+.manifesto-dot--clay {
+  background-color: #D89B88;
+}
+
+.manifesto-dot--sand {
+  background-color: #E2D5BE;
+}
+
+.manifesto-attribution {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-500);
+}
+
+/* ==========================================================================
+   COMMON SECTION HELPERS
    ========================================================================== */
 .section {
-  padding-block: clamp(4rem, 7.5vw, 6.5rem);
+  padding-block: clamp(4.25rem, 7.5vw, 6.5rem);
 }
 
-.section--bordered {
-  border-bottom: 1px solid var(--border-hairline);
+.section--cream {
+  background-color: var(--bg-cream);
+  border-bottom: 1px solid var(--line-subtle);
 }
 
-.section--sand {
-  background-color: var(--bg-sand);
-  border-top: 1px solid var(--border-hairline);
-  border-bottom: 1px solid var(--border-hairline);
+.section--paper {
+  background-color: var(--bg-paper);
+  border-bottom: 1px solid var(--line-subtle);
 }
 
-.section--warm {
-  background-color: var(--bg-warm);
+.section--sage-tint {
+  background-color: var(--bg-sage-tint);
+  border-bottom: 1px solid var(--line-mid);
 }
 
-.section--navy {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
-}
-
-.section-index {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal-600);
-  margin-bottom: 0.75rem;
-}
-
-.section-index--light {
-  color: #7AD3C8;
-}
-
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+.display-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.4vw, 2.95rem);
   font-weight: 400;
-  line-height: 1.14;
+  line-height: 1.12;
   letter-spacing: -0.02em;
   color: var(--ink-900);
 }
 
-.section-title--light {
-  color: var(--ink-on-navy);
+.display-heading--xl {
+  font-size: clamp(2.35rem, 4vw, 3.4rem);
 }
 
-.section-header-row {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.5rem;
-  align-items: end;
-  margin-bottom: clamp(2.5rem, 5vw, 3.75rem);
-}
-
-.section-header-row__sub {
+.lead-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--ink-700);
-  font-size: 1rem;
-  line-height: 1.65;
+  margin-top: 1rem;
 }
 
-.editorial-split {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
-  margin-bottom: clamp(2.75rem, 5vw, 4rem);
-}
-
-.editorial-prose {
+.body-paragraph {
+  font-size: 0.96rem;
+  line-height: 1.68;
   color: var(--ink-700);
-  font-size: 1.02rem;
-  line-height: 1.72;
+  margin-top: 0.9rem;
 }
 
-.editorial-prose + .editorial-prose {
-  margin-top: 1.1rem;
-}
-
-.editorial-prose--large {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 1.6vw, 1.42rem);
-  line-height: 1.5;
-  color: var(--ink-900);
-}
-
-/* ==========================================================================
-   2. PHILOSOPHY PILLARS
-   ========================================================================== */
-.pillar-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--border-strong);
-  border-bottom: 1px solid var(--border-strong);
-}
-
-.pillar-card {
-  padding: 2rem 1.75rem;
-  border-right: 1px solid var(--border-hairline);
-}
-
-.pillar-card:first-child {
-  padding-left: 0;
-}
-
-.pillar-card:last-child {
-  border-right: none;
-  padding-right: 0;
-}
-
-.pillar-card__num {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--teal-600);
-  margin-bottom: 0.65rem;
-}
-
-.pillar-card__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 0.6rem;
-  color: var(--ink-900);
-}
-
-.pillar-card__body {
-  font-size: 0.94rem;
-  color: var(--ink-700);
-  line-height: 1.65;
-}
-
-/* ==========================================================================
-   3. TREATMENTS / CLINICAL DISCIPLINES
-   ========================================================================== */
-.treatments-layout {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 2.25rem;
-  align-items: start;
-}
-
-.treatment-index {
-  display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--border-strong);
-}
-
-.treatment-tab {
-  display: grid;
-  grid-template-columns: 36px 1fr;
-  row-gap: 0.2rem;
-  text-align: left;
-  padding: 1.15rem 1rem;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--border-hairline);
-  border-left: 3px solid transparent;
-  cursor: pointer;
-  transition: background-color 0.18s ease, border-color 0.18s ease;
-}
-
-.treatment-tab:hover {
-  background-color: rgba(252, 251, 247, 0.6);
-}
-
-.treatment-tab.is-active {
-  background-color: var(--bg-paper);
-  border-left-color: var(--teal-600);
-}
-
-.treatment-tab__num {
-  grid-row: 1 / 3;
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--teal-600);
-  padding-top: 0.15rem;
-}
-
-.treatment-tab__name {
-  font-family: var(--font-display);
-  font-size: 1.12rem;
-  font-weight: 500;
-  color: var(--ink-900);
-}
-
-.treatment-tab__meta {
+.photo-caption {
   font-size: 0.8rem;
   color: var(--ink-500);
+  line-height: 1.5;
+  margin-top: 0.65rem;
 }
 
-.treatment-panel {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: clamp(1.5rem, 3.5vw, 2.5rem);
-  box-shadow: var(--shadow-subtle);
-}
-
-.treatment-panel__kicker {
-  display: inline-block;
+.photo-caption span {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  color: var(--teal-600);
-  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
 }
 
-.treatment-panel__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 0.85rem;
-}
-
-.treatment-panel__desc {
-  color: var(--ink-700);
-  font-size: 0.98rem;
-  line-height: 1.68;
-  margin-bottom: 1.75rem;
-}
-
-.treatment-panel__details {
+/* ==========================================================================
+   3. CLINIC PHILOSOPHY & COMFORT SPREAD (CANARY-STYLE ICON + PHOTO SPREAD)
+   ========================================================================== */
+.care-spread {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 1.75rem;
-  padding-block: 1.5rem;
-  border-top: 1px solid var(--border-hairline);
-  border-bottom: 1px solid var(--border-hairline);
-  margin-bottom: 1.75rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2.25rem, 5vw, 4.5rem);
+  align-items: start;
 }
 
-.treatment-detail-col__heading {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-500);
-  margin-bottom: 0.85rem;
+.care-spread__photo img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-mid);
+  object-fit: cover;
 }
 
-.treatment-list {
+.care-features {
   display: grid;
-  gap: 0.55rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 1.85rem;
+  margin-top: 2.25rem;
 }
 
-.treatment-list li {
-  position: relative;
-  padding-left: 1.15rem;
+.care-feature__icon {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 0.75rem;
+}
+
+.care-feature__title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--ink-900);
+  margin-bottom: 0.35rem;
+}
+
+.care-feature__text {
   font-size: 0.9rem;
   color: var(--ink-700);
-  line-height: 1.5;
+  line-height: 1.58;
 }
 
-.treatment-list li::before {
+/* ==========================================================================
+   4. "WHAT BRINGS YOU IN?" — CROSS-HAIR HAIRLINE CHAPTERS & DIRECTORY
+   ========================================================================== */
+.section-intro-centered {
+  max-width: 680px;
+  margin: 0 auto clamp(3rem, 5vw, 4.25rem);
+  text-align: center;
+}
+
+.section-intro-centered__sub {
+  font-size: 1.02rem;
+  color: var(--ink-700);
+  line-height: 1.65;
+  margin-top: 0.85rem;
+}
+
+.editorial-Chapters {
+  border-top: 1px solid var(--line-ink);
+  border-bottom: 1px solid var(--line-ink);
+}
+
+.chapter-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--line-ink);
+}
+
+.chapter-row:last-child {
+  border-bottom: none;
+}
+
+.chapter-row__media {
+  padding: clamp(1.5rem, 3.5vw, 2.75rem);
+  border-right: 1px solid var(--line-ink);
+  display: flex;
+  align-items: center;
+}
+
+.chapter-row--reverse .chapter-row__media {
+  border-right: none;
+  border-left: 1px solid var(--line-ink);
+}
+
+.chapter-row__media img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.chapter-row__text {
+  padding: clamp(1.75rem, 4vw, 3.25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.chapter-row__tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--teal-600);
+  margin-bottom: 0.55rem;
+}
+
+.chapter-row__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.65rem, 2.5vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.16;
+  margin-bottom: 0.9rem;
+}
+
+.chapter-row__body {
+  font-size: 0.96rem;
+  color: var(--ink-700);
+  line-height: 1.68;
+  margin-bottom: 1.25rem;
+}
+
+.chapter-row__bullets {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 1.75rem;
+}
+
+.chapter-row__bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: 0.88rem;
+  color: var(--ink-900);
+  font-weight: 500;
+}
+
+.chapter-row__bullets li::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0.55rem;
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background-color: var(--teal-600);
+  background-color: var(--clay-600);
 }
 
-.treatment-meta-dl {
-  display: grid;
-  gap: 1rem;
-}
-
-.treatment-meta-dl dt {
-  font-size: 0.78rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--ink-900);
-  margin-bottom: 0.2rem;
-}
-
-.treatment-meta-dl dd {
-  font-size: 0.88rem;
-  color: var(--ink-700);
-  line-height: 1.5;
-}
-
-.treatment-panel__actions {
+.chapter-row__actions {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+/* Complete 5-Service Clinical Directory */
+.treatment-directory {
+  margin-top: 3.75rem;
+}
+
+.treatment-directory__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.treatment-directory__title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.treatment-directory__note {
+  font-size: 0.88rem;
+  color: var(--ink-500);
+}
+
+.treatment-directory__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--line-mid);
+  border-bottom: 1px solid var(--line-mid);
+}
+
+.directory-item {
+  padding: 1.5rem 1.25rem;
+  border-right: 1px solid var(--line-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   gap: 0.85rem;
 }
 
-/* ==========================================================================
-   4. DENTIST & CLINICAL TEAM SECTION
-   ========================================================================== */
-.doctor-showcase {
-  display: grid;
-  grid-template-columns: 0.88fr 1.12fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: center;
+.directory-item:first-child {
+  padding-left: 0;
 }
 
-.doctor-frame {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-subtle);
+.directory-item:last-child {
+  border-right: none;
+  padding-right: 0;
 }
 
-.doctor-frame img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-}
-
-.doctor-frame__badge {
-  padding: 0.75rem 1rem;
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  color: var(--ink-500);
-  background-color: var(--bg-paper);
-  border-top: 1px solid var(--border-hairline);
-}
-
-.demo-profile-notice {
-  background-color: var(--teal-100);
-  border-left: 3px solid var(--teal-600);
-  padding: 0.9rem 1.1rem;
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: 0.86rem;
-  color: var(--ink-900);
-  line-height: 1.55;
-  margin-block: 1.25rem;
-}
-
-.doctor-principles {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
-  margin-block: 1.75rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-hairline);
-}
-
-.doctor-principle__title {
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 500;
-  margin-bottom: 0.35rem;
-}
-
-.doctor-principle__text {
-  font-size: 0.88rem;
-  color: var(--ink-700);
-  line-height: 1.58;
-}
-
-/* ==========================================================================
-   5. PATIENT-FIRST VISIT JOURNEY & RIYA SPOTLIGHT
-   ========================================================================== */
-.journey-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4.5vw, 4rem);
-  align-items: center;
-  margin-bottom: 3.5rem;
-}
-
-.journey-header__sub {
-  color: var(--ink-on-navy-muted);
-  font-size: 1.02rem;
-  line-height: 1.68;
-  margin-top: 1rem;
-}
-
-.riya-spotlight {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1.35rem;
-  align-items: center;
-  background-color: var(--bg-navy-soft);
-  border: 1px solid var(--border-navy);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
-}
-
-.riya-spotlight__mascot-stage {
-  width: 96px;
-  height: 96px;
-  border-radius: var(--radius-md);
-  background: radial-gradient(circle at 50% 35%, rgba(91, 196, 184, 0.22), rgba(17, 34, 48, 0.4));
-  border: 1px solid rgba(247, 243, 235, 0.14);
+.directory-item__top {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px;
-}
-
-.riya-spotlight__mascot {
-  width: 84px;
-  height: 84px;
-  animation: riya-gentle-float 4.5s ease-in-out infinite;
-}
-
-.riya-spotlight__eyebrow {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  color: #7AD3C8;
-  margin-bottom: 0.3rem;
-}
-
-.riya-spotlight__title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 400;
-  color: var(--ink-on-navy);
-  margin-bottom: 0.45rem;
-}
-
-.riya-spotlight__body {
-  font-size: 0.88rem;
-  color: var(--ink-on-navy-muted);
-  line-height: 1.58;
-  margin-bottom: 1rem;
-}
-
-.journey-steps {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-.journey-step {
-  background-color: var(--bg-navy-soft);
-  border: 1px solid var(--border-navy);
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.35rem;
-}
-
-.journey-step__top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
   gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--border-navy);
 }
 
-.journey-step__num {
+.directory-item__num {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: #7AD3C8;
+  font-size: 0.72rem;
+  color: var(--teal-600);
+}
+
+.directory-item__name {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
   font-weight: 500;
 }
 
-.journey-step__tag {
-  font-size: 0.72rem;
-  color: var(--ink-on-navy-muted);
-}
-
-.journey-step__title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  font-weight: 400;
-  color: var(--ink-on-navy);
-  margin-bottom: 0.55rem;
-}
-
-.journey-step__desc {
-  font-size: 0.88rem;
-  color: var(--ink-on-navy-muted);
-  line-height: 1.6;
-}
-
-/* ==========================================================================
-   6. CURATED STUDIO GALLERY
-   ========================================================================== */
-.studio-gallery {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 1.5rem;
-}
-
-.gallery-card {
-  grid-column: span 6;
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.gallery-card--wide {
-  grid-column: span 7;
-}
-
-.gallery-card--tall {
-  grid-column: span 5;
-}
-
-.gallery-card__img-wrap {
-  overflow: hidden;
-  background-color: var(--bg-sand);
+.directory-item__desc {
+  font-size: 0.84rem;
+  color: var(--ink-700);
+  line-height: 1.55;
   flex: 1;
 }
 
-.gallery-card__img-wrap img {
-  width: 100%;
-  height: 100%;
-  max-height: 410px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.gallery-card:hover .gallery-card__img-wrap img {
-  transform: scale(1.02);
-}
-
-.gallery-card__caption {
-  padding: 1rem 1.25rem;
-  border-top: 1px solid var(--border-hairline);
-  background-color: var(--bg-paper);
-}
-
-.gallery-card__tag {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  color: var(--teal-600);
-  margin-bottom: 0.3rem;
-}
-
-.gallery-card__caption p {
-  font-size: 0.88rem;
-  color: var(--ink-700);
-  line-height: 1.55;
-}
-
-/* ==========================================================================
-   7. COMFORT, CARE & CLINICAL TECHNOLOGY
-   ========================================================================== */
-.comfort-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.comfort-column {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: clamp(1.5rem, 3vw, 2.25rem);
-}
-
-.comfort-column__heading {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border-hairline);
-}
-
-.comfort-list {
-  display: grid;
-  gap: 1.15rem;
-}
-
-.comfort-list li {
-  display: grid;
-  gap: 0.2rem;
-}
-
-.comfort-list strong {
-  font-size: 0.96rem;
-  color: var(--ink-900);
-}
-
-.comfort-list span {
-  font-size: 0.88rem;
-  color: var(--ink-700);
-  line-height: 1.58;
-}
-
-/* ==========================================================================
-   8. INTERACTIVE FAQ ACCORDION
-   ========================================================================== */
-.faq-layout {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: clamp(2rem, 5vw, 4.5rem);
-  align-items: start;
-}
-
-.faq-layout__sub {
-  color: var(--ink-700);
-  font-size: 0.96rem;
-  line-height: 1.65;
-  margin-block: 1rem 1.75rem;
-}
-
-.faq-riya-box {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-md);
-  padding: 1.15rem;
-}
-
-.faq-riya-box strong {
-  display: block;
-  font-size: 0.92rem;
-  margin-bottom: 0.15rem;
-}
-
-.faq-riya-box p {
-  font-size: 0.84rem;
-  color: var(--ink-700);
-  margin-bottom: 0.45rem;
-}
-
-.link-btn {
+.directory-item__link {
+  align-self: flex-start;
   background: none;
   border: none;
   padding: 0;
-  font-size: 0.84rem;
+  font-size: 0.82rem;
   font-weight: 700;
   color: var(--teal-600);
   cursor: pointer;
 }
 
-.link-btn:hover {
+.directory-item__link:hover {
   text-decoration: underline;
 }
 
+/* ==========================================================================
+   5. COMFORT & TECHNOLOGY (NUMBERED SEQUENCE 01 / 02 / 03)
+   ========================================================================== */
+.tech-header {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.5rem;
+  align-items: end;
+  margin-bottom: 3.25rem;
+}
+
+.tech-header__copy {
+  font-size: 1rem;
+  color: var(--ink-700);
+  line-height: 1.68;
+}
+
+.tech-sequence {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  border-top: 1px solid var(--line-ink);
+  padding-top: 2.25rem;
+}
+
+.tech-item__number {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 2.75rem;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--clay-600);
+  margin-bottom: 1rem;
+}
+
+.tech-item__title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.tech-item__body {
+  font-size: 0.92rem;
+  color: var(--ink-700);
+  line-height: 1.65;
+}
+
+/* ==========================================================================
+   6. CLINICAL TEAM & STUDIO IMAGERY
+   ========================================================================== */
+.team-editorial {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.25rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-bottom: 4rem;
+}
+
+.demo-transparency-card {
+  margin-top: 1.75rem;
+  background-color: var(--bg-cream);
+  border-left: 3px solid var(--teal-600);
+  padding: 1.1rem 1.25rem;
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+}
+
+.demo-transparency-card__title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--teal-700);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.demo-transparency-card__text {
+  font-size: 0.85rem;
+  color: var(--ink-700);
+  line-height: 1.58;
+}
+
+.team-editorial__portrait img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-mid);
+}
+
+.spaces-gallery {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 2rem;
+  align-items: start;
+  padding-top: 3rem;
+  border-top: 1px solid var(--line-subtle);
+}
+
+.spaces-gallery__item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line-mid);
+}
+
+/* ==========================================================================
+   7. FIRST VISIT JOURNEY & SIGNATURE RIYA MASCOT CARD
+   ========================================================================== */
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: clamp(2.25rem, 5vw, 4.25rem);
+  align-items: center;
+}
+
+.visit-timeline {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.visit-timeline__item {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(24, 34, 38, 0.16);
+}
+
+.visit-timeline__step {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal-700);
+  padding-top: 0.15rem;
+}
+
+.visit-timeline__title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.visit-timeline__text {
+  font-size: 0.92rem;
+  color: var(--ink-700);
+  line-height: 1.6;
+}
+
+.riya-feature-card {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-ink);
+  border-radius: var(--radius-md);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.riya-feature-card__illustration {
+  width: 96px;
+  height: 96px;
+  background-color: var(--bg-cream);
+  border: 1px solid var(--line-subtle);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.riya-feature-card__mascot {
+  width: 82px;
+  height: 82px;
+  animation: riya-float 4.8s ease-in-out infinite;
+}
+
+.riya-feature-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.riya-feature-card__body {
+  font-size: 0.94rem;
+  color: var(--ink-700);
+  line-height: 1.65;
+  margin-bottom: 0.85rem;
+}
+
+.riya-feature-card__honesty {
+  font-size: 0.84rem;
+  color: var(--ink-500);
+  line-height: 1.55;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--teal-600);
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================================================================
+   8. FAQ ACCORDION
+   ========================================================================== */
+.faq-split {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2.25rem, 5vw, 4.5rem);
+  align-items: start;
+}
+
+.faq-split__left .btn {
+  margin-top: 1.5rem;
+}
+
 .faq-accordion {
-  border-top: 1px solid var(--border-strong);
+  border-top: 1px solid var(--line-ink);
 }
 
 .faq-item {
-  border-bottom: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--line-mid);
 }
 
 .faq-trigger {
@@ -1437,21 +1168,21 @@ ol {
   align-items: center;
   justify-content: space-between;
   gap: 1.25rem;
-  padding: 1.25rem 0.25rem;
+  padding: 1.35rem 0.25rem;
   background: none;
   border: none;
   text-align: left;
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 400;
   color: var(--ink-900);
   cursor: pointer;
 }
 
 .faq-trigger__icon {
   position: relative;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   flex-shrink: 0;
 }
 
@@ -1459,21 +1190,21 @@ ol {
 .faq-trigger__icon::after {
   content: '';
   position: absolute;
-  background-color: var(--teal-600);
+  background-color: var(--ink-900);
   transition: transform 0.2s ease;
 }
 
 .faq-trigger__icon::before {
-  top: 9px;
-  left: 3px;
+  top: 8px;
+  left: 2px;
   width: 14px;
-  height: 1.8px;
+  height: 1.6px;
 }
 
 .faq-trigger__icon::after {
-  top: 3px;
-  left: 9px;
-  width: 1.8px;
+  top: 2px;
+  left: 8px;
+  width: 1.6px;
   height: 14px;
 }
 
@@ -1482,7 +1213,7 @@ ol {
 }
 
 .faq-panel {
-  padding: 0 0.5rem 1.35rem 0.25rem;
+  padding: 0 0.5rem 1.4rem 0.25rem;
 }
 
 .faq-panel p {
@@ -1492,104 +1223,70 @@ ol {
 }
 
 /* ==========================================================================
-   9. CONTACT, HOURS & APPOINTMENT REQUEST FORM
+   9. APPOINTMENTS & ENQUIRIES SECTION
    ========================================================================== */
-.contact-grid {
+.enquiry-layout {
   display: grid;
-  grid-template-columns: 0.92fr 1.08fr;
-  gap: clamp(2rem, 4.5vw, 4rem);
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: clamp(2.25rem, 5vw, 4.25rem);
   align-items: start;
 }
 
-.contact-info__lead {
-  color: var(--ink-700);
-  font-size: 0.98rem;
-  line-height: 1.65;
-  margin-block: 0.9rem 1.75rem;
-}
-
-.contact-cards {
+.enquiry-meta-blocks {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--line-subtle);
 }
 
-.contact-detail-card {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-hairline);
-  border-radius: var(--radius-sm);
-  padding: 1.1rem 1.25rem;
-}
-
-.contact-detail-card__label {
+.enquiry-meta-block__label {
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   color: var(--teal-600);
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
-.contact-detail-card__value {
-  display: block;
-  font-family: var(--font-display);
-  font-size: 1.04rem;
-  font-weight: 500;
+.enquiry-meta-block__value {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
   color: var(--ink-900);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
-.contact-detail-card__sub {
-  font-size: 0.84rem;
-  color: var(--ink-500);
-}
-
-.hours-list {
-  display: grid;
-  gap: 0.35rem;
-  font-size: 0.88rem;
-}
-
-.hours-list div {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.hours-list dt {
+.enquiry-meta-block__note {
+  font-size: 0.86rem;
   color: var(--ink-700);
+  line-height: 1.55;
+  margin-bottom: 0.5rem;
 }
 
-.hours-list dd {
-  font-weight: 600;
-  color: var(--ink-900);
-}
-
-/* Appointment Request Card */
-.appointment-card {
-  background-color: var(--bg-paper);
-  border: 1px solid var(--border-strong);
+.enquiry-form-card {
+  background-color: var(--bg-cream);
+  border: 1px solid var(--line-ink);
   border-radius: var(--radius-md);
   padding: clamp(1.5rem, 3.5vw, 2.35rem);
-  box-shadow: var(--shadow-subtle);
 }
 
-.appointment-card__header {
+.enquiry-form-card__header {
   display: flex;
   align-items: flex-start;
   gap: 0.9rem;
   padding-bottom: 1.25rem;
   margin-bottom: 1.35rem;
-  border-bottom: 1px solid var(--border-hairline);
+  border-bottom: 1px solid var(--line-mid);
 }
 
-.appointment-card__title {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 500;
+.enquiry-form-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 400;
   margin-bottom: 0.2rem;
 }
 
-.appointment-card__sub {
+.enquiry-form-card__sub {
   font-size: 0.86rem;
   color: var(--ink-700);
   line-height: 1.5;
@@ -1608,7 +1305,7 @@ ol {
 
 .form-field {
   display: grid;
-  gap: 0.38rem;
+  gap: 0.35rem;
 }
 
 .form-field label {
@@ -1621,20 +1318,19 @@ ol {
 .form-field select,
 .form-field textarea {
   width: 100%;
-  background-color: var(--bg-plaster);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-sm);
-  padding: 0.7rem 0.85rem;
+  background-color: var(--bg-paper);
+  border: 1px solid var(--line-mid);
+  border-radius: var(--radius-xs);
+  padding: 0.72rem 0.85rem;
   font-size: 0.9rem;
   color: var(--ink-900);
-  transition: border-color 0.16s ease, background-color 0.16s ease;
+  transition: border-color 0.16s ease;
 }
 
 .form-field input:focus,
 .form-field select:focus,
 .form-field textarea:focus {
-  background-color: #FFFFFF;
-  border-color: var(--teal-600);
+  border-color: var(--line-ink);
   outline: none;
 }
 
@@ -1647,93 +1343,109 @@ ol {
   border-radius: var(--radius-xs);
 }
 
-.appointment-form__disclaimer {
+.form-confirmation {
+  background-color: var(--bg-paper);
+  border: 1px solid var(--teal-600);
+  border-left: 4px solid var(--teal-600);
+  padding: 0.9rem 1rem;
+  border-radius: var(--radius-xs);
+  display: grid;
+  gap: 0.25rem;
+}
+
+.form-confirmation strong {
+  font-size: 0.9rem;
+  color: var(--ink-900);
+}
+
+.form-confirmation span {
+  font-size: 0.82rem;
+  color: var(--ink-700);
+}
+
+.form-footnote {
   font-size: 0.78rem;
   color: var(--ink-500);
-  line-height: 1.5;
   text-align: center;
 }
 
 /* ==========================================================================
-   10. REFINED FOOTER
+   10. FOOTER WITH UNOBTRUSIVE DEMO DISCLOSURE
    ========================================================================== */
 .site-footer {
-  background-color: var(--bg-navy);
-  color: var(--ink-on-navy);
+  background-color: var(--bg-cream);
+  color: var(--ink-900);
   padding-block: 4rem 5.5rem;
+  border-top: 1px solid var(--line-ink);
 }
 
-.site-footer__top {
+.site-footer__main {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 3rem;
-  padding-bottom: 2.75rem;
-  border-bottom: 1px solid var(--border-navy);
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--line-mid);
 }
 
-.site-footer__summary {
-  color: var(--ink-on-navy-muted);
+.site-footer__tagline {
   font-size: 0.9rem;
+  color: var(--ink-700);
   line-height: 1.65;
-  margin-top: 1rem;
-  max-width: 42ch;
+  margin-top: 0.9rem;
+  max-width: 38ch;
 }
 
-.site-footer__nav-cols {
+.site-footer__links-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.footer-col__heading {
+.footer-group__title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #7AD3C8;
-  margin-bottom: 0.9rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-500);
+  margin-bottom: 0.85rem;
 }
 
-.footer-col ul {
+.footer-group ul {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.45rem;
 }
 
-.footer-col a {
+.footer-group a {
   font-size: 0.88rem;
-  color: var(--ink-on-navy-muted);
-  transition: color 0.16s ease;
+  color: var(--ink-900);
 }
 
-.footer-col a:hover {
-  color: var(--ink-on-navy);
+.footer-group a:hover {
+  color: var(--teal-600);
+  text-decoration: underline;
 }
 
-.footer-col__note {
+.footer-group__text {
   font-size: 0.84rem;
-  color: var(--ink-on-navy-muted);
+  color: var(--ink-700);
   line-height: 1.55;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
 }
 
-.site-footer__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding-top: 1.75rem;
-  font-size: 0.8rem;
-  color: var(--ink-on-navy-muted);
+.site-footer__disclosure {
+  padding-top: 1.5rem;
+  font-size: 0.76rem;
+  color: var(--ink-500);
+  line-height: 1.55;
 }
 
 /* ==========================================================================
-   FLOATING @n8n/chat WIDGET CUSTOMISATION (mode: 'window') + RIYA MASCOT
+   FLOATING RIYA CHAT WIDGET (Official @n8n/chat in mode: 'window')
    ========================================================================== */
 #n8n-chat .chat-window-wrapper {
   position: fixed !important;
-  right: 24px !important;
-  bottom: 24px !important;
+  right: 22px !important;
+  bottom: 22px !important;
   z-index: 950 !important;
   display: flex !important;
   flex-direction: column !important;
@@ -1742,22 +1454,22 @@ ol {
 }
 
 #n8n-chat .chat-window {
-  width: min(400px, calc(100vw - 24px)) !important;
-  height: min(600px, calc(100dvh - 110px)) !important;
-  margin-bottom: 14px !important;
+  width: min(396px, calc(100vw - 24px)) !important;
+  height: min(590px, calc(100dvh - 108px)) !important;
+  margin-bottom: 12px !important;
   border-radius: 12px !important;
-  border: 1px solid var(--border-strong) !important;
-  background-color: var(--bg-plaster) !important;
-  box-shadow: var(--shadow-floating) !important;
+  border: 1px solid var(--line-ink) !important;
+  background-color: var(--bg-cream) !important;
+  box-shadow: 0 20px 44px -14px rgba(24, 34, 38, 0.24) !important;
   overflow: hidden !important;
 }
 
-/* Custom Floating Header inside @n8n/chat */
+/* Floating Chat Header */
 #n8n-chat .chat-header {
-  background-color: var(--bg-navy) !important;
-  color: var(--ink-on-navy) !important;
+  background-color: var(--bg-charcoal) !important;
+  color: var(--bg-paper) !important;
   padding: 12px 48px 12px 14px !important;
-  border-bottom: 1px solid rgba(247, 243, 235, 0.12) !important;
+  border-bottom: 1px solid rgba(255, 253, 249, 0.14) !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;
@@ -1777,17 +1489,17 @@ ol {
 }
 
 #n8n-chat .chat-header h1 {
-  font-family: var(--font-display) !important;
-  font-size: 1.04rem !important;
-  font-weight: 500 !important;
-  color: var(--ink-on-navy) !important;
+  font-family: var(--font-serif) !important;
+  font-size: 1.05rem !important;
+  font-weight: 400 !important;
+  color: var(--bg-paper) !important;
   margin: 0 !important;
   line-height: 1.2 !important;
 }
 
 #n8n-chat .chat-header p {
   font-size: 0.75rem !important;
-  color: var(--ink-on-navy-muted) !important;
+  color: #C7D2D6 !important;
   margin: 0 0 0 46px !important;
   line-height: 1.3 !important;
 }
@@ -1796,8 +1508,8 @@ ol {
   width: 36px;
   height: 36px;
   border-radius: 8px;
-  background-color: rgba(247, 243, 235, 0.1);
-  padding: 3px;
+  background-color: var(--bg-cream);
+  padding: 2px;
   flex-shrink: 0;
 }
 
@@ -1806,9 +1518,9 @@ ol {
   top: 50%;
   right: 12px;
   transform: translateY(-50%);
-  background: rgba(247, 243, 235, 0.1);
-  border: 1px solid rgba(247, 243, 235, 0.2);
-  color: var(--ink-on-navy);
+  background: rgba(255, 253, 249, 0.1);
+  border: 1px solid rgba(255, 253, 249, 0.22);
+  color: var(--bg-paper);
   width: 30px;
   height: 30px;
   border-radius: 6px;
@@ -1816,17 +1528,15 @@ ol {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  flex-shrink: 0;
-  transition: background-color 0.16s ease;
 }
 
 .riya-chat-close-btn:hover {
-  background: rgba(247, 243, 235, 0.22);
+  background: rgba(255, 253, 249, 0.22);
 }
 
-/* Top-aligned Message List & Bubbles */
+/* Message Stream */
 #n8n-chat .chat-body {
-  background-color: var(--bg-plaster) !important;
+  background-color: var(--bg-cream) !important;
 }
 
 #n8n-chat .chat-messages-list {
@@ -1843,20 +1553,19 @@ ol {
   line-height: 1.55 !important;
   border-radius: 10px !important;
   padding: 11px 14px !important;
-  box-shadow: 0 1px 2px rgba(17, 34, 48, 0.04) !important;
-  position: relative !important;
+  box-shadow: 0 1px 2px rgba(24, 34, 38, 0.05) !important;
 }
 
 #n8n-chat .chat-message-from-bot {
   background-color: var(--bg-paper) !important;
   color: var(--ink-900) !important;
-  border: 1px solid var(--border-hairline) !important;
+  border: 1px solid var(--line-mid) !important;
   border-top-left-radius: 3px !important;
 }
 
 #n8n-chat .chat-message-from-user {
-  background-color: var(--bg-navy) !important;
-  color: var(--ink-on-navy) !important;
+  background-color: var(--bg-charcoal) !important;
+  color: var(--bg-paper) !important;
   border-top-right-radius: 3px !important;
 }
 
@@ -1864,15 +1573,15 @@ ol {
   content: attr(data-time);
   display: block;
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  opacity: 0.62;
+  font-size: 0.64rem;
+  opacity: 0.6;
   margin-top: 5px;
 }
 
 /* Typing Bounce Indicator */
 #n8n-chat .chat-message-typing {
   padding: 12px 16px !important;
-  min-width: 68px !important;
+  min-width: 66px !important;
 }
 
 #n8n-chat .chat-message-typing-body {
@@ -1886,7 +1595,7 @@ ol {
   height: 7px !important;
   border-radius: 50% !important;
   background-color: var(--teal-600) !important;
-  animation: riya-typing-bounce 1.15s infinite ease-in-out !important;
+  animation: riya-typing 1.15s infinite ease-in-out !important;
 }
 
 #n8n-chat .chat-message-typing-circle:nth-child(2) {
@@ -1900,15 +1609,15 @@ ol {
 /* Chat Input Footer */
 #n8n-chat .chat-footer {
   background-color: var(--bg-paper) !important;
-  border-top: 1px solid var(--border-hairline) !important;
+  border-top: 1px solid var(--line-mid) !important;
   padding: 10px 12px !important;
 }
 
 #n8n-chat .chat-input textarea {
   font-family: var(--font-sans) !important;
   font-size: 0.9rem !important;
-  background-color: var(--bg-plaster) !important;
-  border: 1px solid var(--border-strong) !important;
+  background-color: var(--bg-cream) !important;
+  border: 1px solid var(--line-mid) !important;
   border-radius: 8px !important;
   padding: 10px 12px !important;
   color: var(--ink-900) !important;
@@ -1916,13 +1625,13 @@ ol {
 
 #n8n-chat .chat-input textarea:focus {
   background-color: #FFFFFF !important;
-  border-color: var(--teal-600) !important;
+  border-color: var(--line-ink) !important;
   outline: none !important;
 }
 
 #n8n-chat .chat-input-send-button {
-  background-color: var(--bg-navy) !important;
-  color: var(--ink-on-navy) !important;
+  background-color: var(--bg-charcoal) !important;
+  color: var(--bg-paper) !important;
   border-radius: 8px !important;
   width: 40px !important;
   height: 40px !important;
@@ -1933,22 +1642,22 @@ ol {
   background-color: var(--teal-600) !important;
 }
 
-/* Custom Riya Floating Launcher Button (.chat-window-toggle) */
+/* Floating Launcher (.chat-window-toggle) */
 #n8n-chat .chat-window-toggle {
   width: auto !important;
-  height: 56px !important;
-  min-width: 56px !important;
-  padding: 6px 16px 6px 8px !important;
-  border-radius: 12px !important;
-  background-color: var(--bg-navy) !important;
-  color: var(--ink-on-navy) !important;
-  border: 1px solid rgba(247, 243, 235, 0.22) !important;
-  box-shadow: 0 14px 32px -8px rgba(17, 34, 48, 0.35) !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  padding: 6px 15px 6px 8px !important;
+  border-radius: 10px !important;
+  background-color: var(--bg-charcoal) !important;
+  color: var(--bg-paper) !important;
+  border: 1px solid var(--line-ink) !important;
+  box-shadow: 0 12px 28px -6px rgba(24, 34, 38, 0.32) !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 10px !important;
   cursor: pointer !important;
-  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease !important;
+  transition: transform 0.18s ease, background-color 0.18s ease !important;
 }
 
 #n8n-chat .chat-window-toggle:hover {
@@ -1956,7 +1665,6 @@ ol {
   transform: translateY(-2px) !important;
 }
 
-/* Hide default generic SVG inside launcher once Riya launcher content is mounted */
 #n8n-chat .chat-window-toggle.has-riya-launcher > svg {
   display: none !important;
 }
@@ -1969,10 +1677,10 @@ ol {
 
 .riya-launcher-avatar {
   position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background-color: var(--bg-plaster);
+  width: 38px;
+  height: 38px;
+  border-radius: 7px;
+  background-color: var(--bg-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1981,19 +1689,19 @@ ol {
 }
 
 .riya-launcher-avatar img {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
 }
 
 .riya-launcher-dot {
   position: absolute;
   top: -3px;
   right: -3px;
-  width: 10px;
-  height: 10px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
   background-color: #24B47E;
-  border: 2px solid var(--bg-navy);
+  border: 2px solid var(--bg-charcoal);
 }
 
 .riya-launcher-copy {
@@ -2004,21 +1712,20 @@ ol {
 }
 
 .riya-launcher-title {
-  font-family: var(--font-display);
+  font-family: var(--font-serif);
   font-size: 0.92rem;
-  font-weight: 500;
-  color: var(--ink-on-navy);
+  font-weight: 400;
+  color: var(--bg-paper);
 }
 
 .riya-launcher-sub {
   font-family: var(--font-mono);
-  font-size: 0.65rem;
-  color: #8CE0D6;
-  letter-spacing: 0.04em;
+  font-size: 0.62rem;
+  color: #9FE0D7;
+  letter-spacing: 0.05em;
   margin-top: 2px;
 }
 
-/* Error / Connection Banner inside Chat Window */
 .riya-chat-alert {
   background-color: var(--danger-100);
   color: var(--danger-700);
@@ -2042,8 +1749,7 @@ ol {
   cursor: pointer;
 }
 
-/* Animations & Reduced Motion Support */
-@keyframes riya-gentle-float {
+@keyframes riya-float {
   0%, 100% {
     transform: translateY(0);
   }
@@ -2052,7 +1758,7 @@ ol {
   }
 }
 
-@keyframes riya-typing-bounce {
+@keyframes riya-typing {
   0%, 80%, 100% {
     transform: translateY(0);
     opacity: 0.45;
@@ -2075,7 +1781,7 @@ ol {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS (TABLET & MOBILE)
+   RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1024px) {
   .site-nav {
@@ -2086,100 +1792,84 @@ ol {
     display: inline-flex;
   }
 
-  .hero__grid,
-  .editorial-split,
-  .section-header-row,
-  .treatments-layout,
-  .doctor-showcase,
-  .journey-header,
-  .faq-layout,
-  .contact-grid,
-  .site-footer__top {
+  .hero__layout,
+  .care-spread,
+  .chapter-row,
+  .tech-header,
+  .team-editorial,
+  .spaces-gallery,
+  .journey-grid,
+  .faq-split,
+  .enquiry-layout,
+  .site-footer__main {
     grid-template-columns: 1fr;
   }
 
-  .pillar-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pillar-card {
-    padding-inline: 0;
+  .chapter-row__media,
+  .chapter-row--reverse .chapter-row__media {
     border-right: none;
-    border-bottom: 1px solid var(--border-hairline);
+    border-left: none;
+    border-bottom: 1px solid var(--line-ink);
   }
 
-  .pillar-card:last-child {
-    border-bottom: none;
+  .chapter-row--reverse .chapter-row__media {
+    order: -1;
   }
 
-  .journey-steps {
+  .treatment-directory__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .directory-item {
+    border-bottom: 1px solid var(--line-subtle);
+    padding-inline: 1rem;
+  }
+
+  .tech-sequence {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 }
 
 @media (max-width: 680px) {
-  .utility-bar__meta {
-    display: none;
-  }
-
   .site-header__inner {
+    min-height: 66px;
     gap: 0.65rem;
-    min-height: 64px;
   }
 
-  .brand {
-    gap: 0.55rem;
+  .site-header__actions .btn--sage {
+    display: none;
   }
 
   .brand__name {
-    font-size: 1rem;
-    white-space: nowrap;
+    font-size: 1.15rem;
   }
 
-  .brand__location {
-    font-size: 0.62rem;
-    white-space: nowrap;
+  .btn {
+    white-space: normal;
+    text-align: center;
+    padding: 0.78rem 1.15rem;
   }
 
-  .site-header__actions .btn--primary {
-    display: none;
+  .chapter-row__media,
+  .chapter-row__text {
+    padding: 1.35rem 1.1rem;
   }
 
-  .hero__visual {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__main-frame {
-    grid-column: 1 / -1;
-  }
-
-  .hero__inset-frame {
-    grid-column: 1 / -1;
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: 88px 1fr;
-    gap: 0.85rem;
-    align-items: center;
-  }
-
-  .treatment-panel__details,
-  .doctor-principles,
-  .journey-steps,
-  .comfort-grid,
+  .care-features,
+  .treatment-directory__grid,
   .form-row,
-  .site-footer__nav-cols {
+  .site-footer__links-grid {
     grid-template-columns: 1fr;
   }
 
-  .riya-spotlight {
-    grid-template-columns: 1fr;
-    text-align: left;
+  .directory-item {
+    padding-inline: 0;
+    border-right: none;
   }
 
-  .gallery-card,
-  .gallery-card--wide,
-  .gallery-card--tall {
-    grid-column: span 12;
+  .spaces-gallery__item img {
+    height: 260px;
   }
 
   #n8n-chat .chat-window-wrapper {
@@ -2189,6 +1879,6 @@ ol {
 
   #n8n-chat .chat-window {
     width: calc(100vw - 24px) !important;
-    height: min(560px, calc(100dvh - 96px)) !important;
+    height: min(550px, calc(100dvh - 94px)) !important;
   }
 }

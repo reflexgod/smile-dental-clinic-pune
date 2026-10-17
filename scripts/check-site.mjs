@@ -17,13 +17,20 @@ const requiredFiles = [
   'assets/js/chat.js',
   'assets/vendor/n8n-chat/n8n-chat.js',
   'assets/vendor/n8n-chat/style.css',
-  'assets/images/hero-896.webp',
-  'assets/images/hero-720.webp',
+  'assets/images/consult-model-1080.webp',
+  'assets/images/consult-model-720.webp',
+  'assets/images/xray-review-1080.webp',
+  'assets/images/xray-review-720.webp',
+  'assets/images/gentle-check-1080.webp',
+  'assets/images/gentle-check-720.webp',
+  'assets/images/cbct-planning-1080.webp',
+  'assets/images/cbct-planning-720.webp',
+  'assets/images/clinical-team-960.webp',
+  'assets/images/clinical-team-720.webp',
+  'assets/images/sunlit-suite-1200.webp',
+  'assets/images/sunlit-suite-800.webp',
   'assets/images/smile-640.webp',
   'assets/images/care-1264.webp',
-  'assets/images/reception-1264.webp',
-  'assets/images/dentist-720.webp',
-  'assets/images/studio-1264.webp',
   'assets/images/og-image.jpg',
 ];
 
@@ -59,13 +66,17 @@ if (!mascotSvg.includes('<svg') || !mascotSvg.includes('riya-enamel')) {
   errors.push('assets/mascot-riya.svg is missing expected custom vector mascot artwork.');
 }
 
+if (html.includes('utility-bar') || html.includes('Koregaon Park')) {
+  errors.push('index.html still contains the prohibited top utility banner or fake address.');
+}
+
 const requiredSections = [
   'id="philosophy"',
   'id="treatments"',
-  'id="doctor"',
-  'id="journey"',
-  'id="spaces"',
   'id="comfort"',
+  'id="team"',
+  'id="spaces"',
+  'id="journey"',
   'id="faq"',
   'id="contact"',
   'id="n8n-chat"',
@@ -82,4 +93,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log('✓ All static site, mascot, section, and floating @n8n/chat checks passed.');
+console.log('✓ All static site, real photography, mascot, section, and floating @n8n/chat checks passed.');
