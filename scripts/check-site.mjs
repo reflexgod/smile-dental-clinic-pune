@@ -17,19 +17,20 @@ const requiredFiles = [
   'assets/js/chat.js',
   'assets/vendor/n8n-chat/n8n-chat.js',
   'assets/vendor/n8n-chat/style.css',
-  'assets/images/consult-model-1080.webp',
-  'assets/images/consult-model-720.webp',
-  'assets/images/xray-review-1080.webp',
-  'assets/images/xray-review-720.webp',
-  'assets/images/gentle-check-1080.webp',
-  'assets/images/gentle-check-720.webp',
+  'assets/images/hero-suite-1080.webp',
+  'assets/images/hero-suite-720.webp',
+  'assets/images/mirror-smile-1080.webp',
+  'assets/images/mirror-smile-720.webp',
+  'assets/images/sage-checkup-1080.webp',
+  'assets/images/sage-checkup-720.webp',
+  'assets/images/optical-scan-1080.webp',
+  'assets/images/optical-scan-720.webp',
   'assets/images/cbct-planning-1080.webp',
   'assets/images/cbct-planning-720.webp',
+  'assets/images/digital-tablet-1080.webp',
+  'assets/images/digital-tablet-720.webp',
   'assets/images/clinical-team-960.webp',
   'assets/images/clinical-team-720.webp',
-  'assets/images/sunlit-suite-1200.webp',
-  'assets/images/sunlit-suite-800.webp',
-  'assets/images/smile-640.webp',
   'assets/images/care-1264.webp',
   'assets/images/og-image.jpg',
 ];
@@ -62,12 +63,17 @@ if (!chatJs.includes("mode: 'window'")) {
   errors.push("assets/js/chat.js must configure @n8n/chat in floating window mode (mode: 'window').");
 }
 
-if (!mascotSvg.includes('<svg') || !mascotSvg.includes('riya-enamel')) {
+if (!mascotSvg.includes('<svg') || !mascotSvg.includes('riya-eyes')) {
   errors.push('assets/mascot-riya.svg is missing expected custom vector mascot artwork.');
 }
 
-if (html.includes('utility-bar') || html.includes('Koregaon Park')) {
-  errors.push('index.html still contains the prohibited top utility banner or fake address.');
+if (
+  html.includes('utility-bar') ||
+  html.includes('Koregaon Park') ||
+  html.includes('hero__stipple') ||
+  html.includes('(Illustrative clinic photography)')
+) {
+  errors.push('index.html still contains prohibited decorative stipple, hero stock caption, or fake address.');
 }
 
 const requiredSections = [

@@ -1,7 +1,7 @@
 /**
  * Smile Dental Clinic, Pune — Official @n8n/chat Floating Receptionist Integration
- * Mounts Riya in floating window mode ('window') with custom mascot launcher,
- * header avatar, CTA prompt handoff, timestamps, and connection monitoring.
+ * Mounts Riya in floating window mode ('window') with a compact, brand-coherent
+ * mascot launcher, header avatar, CTA prompt handoff, timestamps, and connection monitoring.
  */
 
 import { createChat } from '../vendor/n8n-chat/n8n-chat.js';
@@ -67,17 +67,16 @@ function syncLauncherState() {
   if (!toggleBtn) return;
 
   const open = isChatWindowOpen();
+  toggleBtn.classList.toggle('is-open', open);
   setAttrIfChanged(toggleBtn, 'aria-expanded', String(open));
   setAttrIfChanged(
     toggleBtn,
     'aria-label',
-    open ? 'Minimize chat with Riya' : 'Chat with Riya, virtual dental receptionist'
+    open ? 'Close chat with Riya' : 'Ask Riya, virtual receptionist'
   );
 
-  const titleEl = toggleBtn.querySelector('.riya-launcher-title');
-  const subEl = toggleBtn.querySelector('.riya-launcher-sub');
-  setTextIfChanged(titleEl, open ? 'Close Chat' : 'Chat with Riya');
-  setTextIfChanged(subEl, open ? 'ESC TO MINIMIZE' : 'VIRTUAL RECEPTIONIST');
+  const titleEl = toggleBtn.querySelector('.riya-launcher-label');
+  setTextIfChanged(titleEl, open ? 'Close' : 'Ask Riya');
 }
 
 function decorateFloatingWidget() {
@@ -87,7 +86,7 @@ function decorateFloatingWidget() {
 
   isDecorating = true;
   try {
-    // 1. Decorate Floating Launcher (.chat-window-toggle) with Riya Mascot
+    // 1. Decorate Floating Launcher (.chat-window-toggle) with compact Riya Mascot + Label
     const toggleBtn = root.querySelector('.chat-window-toggle');
     if (toggleBtn && !toggleBtn.classList.contains('has-riya-launcher')) {
       toggleBtn.classList.add('has-riya-launcher');
@@ -101,10 +100,7 @@ function decorateFloatingWidget() {
           <img src="./assets/mascot-riya.svg" alt="" width="34" height="34" />
           <span class="riya-launcher-dot"></span>
         </span>
-        <span class="riya-launcher-copy">
-          <span class="riya-launcher-title">Chat with Riya</span>
-          <span class="riya-launcher-sub">VIRTUAL RECEPTIONIST</span>
-        </span>
+        <span class="riya-launcher-label">Ask Riya</span>
       `;
       toggleBtn.appendChild(launcherMarkup);
 
@@ -120,13 +116,13 @@ function decorateFloatingWidget() {
       });
     }
 
-    // 2. Decorate Floating Chat Header (.chat-header) with Riya Avatar + Minimize Button
+    // 2. Decorate Floating Chat Header (.chat-header) with Riya Mascot + Close Button
     const header = root.querySelector('.chat-header');
     const heading = root.querySelector('.chat-heading');
     if (header && heading && !header.querySelector('.riya-chat-header-avatar')) {
       const avatar = document.createElement('img');
       avatar.src = './assets/mascot-riya.svg';
-      avatar.alt = `${ASSISTANT_NAME} mascot`;
+      avatar.alt = `${ASSISTANT_NAME} emblem`;
       avatar.width = 36;
       avatar.height = 36;
       avatar.className = 'riya-chat-header-avatar';
@@ -135,7 +131,7 @@ function decorateFloatingWidget() {
       const closeBtn = document.createElement('button');
       closeBtn.type = 'button';
       closeBtn.className = 'riya-chat-close-btn';
-      closeBtn.setAttribute('aria-label', 'Minimize chat window');
+      closeBtn.setAttribute('aria-label', 'Close chat window');
       closeBtn.innerHTML = `
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
           <path d="M2.5 2.5L11.5 11.5M11.5 2.5L2.5 11.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
@@ -310,10 +306,10 @@ function initRiyaChat() {
     i18n: {
       en: {
         title: `Chat with ${ASSISTANT_NAME}`,
-        subtitle: 'Smile Dental Clinic, Pune · Virtual Receptionist',
+        subtitle: 'Smile Dental Clinic, Pune',
         footer: '',
         getStarted: 'Start Conversation',
-        inputPlaceholder: 'Ask Riya a question or request a visit time...',
+        inputPlaceholder: 'Ask a question or share a preferred visit time...',
         closeButtonTooltip: 'Minimize chat',
       },
     },
