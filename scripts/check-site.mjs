@@ -49,7 +49,7 @@ const mascotSvg = fs.readFileSync(path.join(root, 'assets/mascot-riya.svg'), 'ut
 const expectedWebhook =
   'https://viraaj19.app.n8n.cloud/webhook/36a7ae43-365d-4cc8-b5bc-33d197384391/chat';
 const expectedGreeting =
-  "Hi! I'm Riya from Smile Dental Clinic, Pune. How can I help you today?";
+  "Hello, I'm Riya at the Smile Dental Clinic reception desk. How can I help you today?";
 
 if (!chatJs.includes(expectedWebhook)) {
   errors.push('assets/js/chat.js does not contain the exact required n8n webhook URL.');
@@ -65,6 +65,15 @@ if (!chatJs.includes("mode: 'window'")) {
 
 if (!mascotSvg.includes('<svg') || !mascotSvg.includes('riya-eyes')) {
   errors.push('assets/mascot-riya.svg is missing expected custom vector mascot artwork.');
+}
+
+if (
+  html.includes('—') ||
+  html.includes('–') ||
+  html.includes('&mdash;') ||
+  html.includes('&ndash;')
+) {
+  errors.push('index.html still contains em dashes or en dashes in authored copy.');
 }
 
 if (
@@ -99,4 +108,4 @@ if (errors.length > 0) {
   process.exit(1);
 }
 
-console.log('✓ All static site, real photography, mascot, section, and floating @n8n/chat checks passed.');
+console.log('✓ All static site, human copy audit, real photography, mascot, section, and floating @n8n/chat checks passed.');

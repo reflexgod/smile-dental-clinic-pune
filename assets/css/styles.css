@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SMILE DENTAL CLINIC, PUNE — EDITORIAL BRAND DESIGN SYSTEM
+   SMILE DENTAL CLINIC, PUNE - EDITORIAL BRAND DESIGN SYSTEM
    Warm clinic-interior palette, restrained typography, and cohesive identity
    ========================================================================== */
 
@@ -386,7 +386,7 @@ ol {
 }
 
 /* ==========================================================================
-   1. HERO SECTION — DELIBERATE COMPOSITION & MOBILE HIERARCHY
+   1. HERO SECTION - DELIBERATE COMPOSITION & MOBILE HIERARCHY
    ========================================================================== */
 .hero {
   background-color: var(--bg-cream);
@@ -569,7 +569,7 @@ ol {
 }
 
 /* ==========================================================================
-   3. OUR APPROACH — COMFORT SPREAD
+   3. OUR APPROACH - COMFORT SPREAD
    ========================================================================== */
 .approach-layout {
   display: grid;
@@ -620,7 +620,7 @@ ol {
 }
 
 /* ==========================================================================
-   4. TREATMENTS — "WHAT BRINGS YOU IN?" CHAPTERS & DIRECTORY
+   4. TREATMENTS - "WHAT BRINGS YOU IN?" CHAPTERS & DIRECTORY
    ========================================================================== */
 .section-header-centered {
   max-width: 640px;

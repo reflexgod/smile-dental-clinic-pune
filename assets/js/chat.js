@@ -1,5 +1,5 @@
 /**
- * Smile Dental Clinic, Pune — Official @n8n/chat Floating Receptionist Integration
+ * Smile Dental Clinic, Pune - Official @n8n/chat Floating Receptionist Integration
  * Mounts Riya in floating window mode ('window') with a compact, brand-coherent
  * mascot launcher, header avatar, CTA prompt handoff, timestamps, and connection monitoring.
  */
@@ -11,7 +11,7 @@ const WEBHOOK_URL =
 
 const ASSISTANT_NAME = 'Riya';
 const INITIAL_GREETING =
-  "Hi! I'm Riya from Smile Dental Clinic, Pune. How can I help you today?";
+  "Hello, I'm Riya at the Smile Dental Clinic reception desk. How can I help you today?";
 
 let lastPromptSent = '';
 let isDecorating = false;
@@ -87,7 +87,7 @@ function syncLauncherState() {
   setAttrIfChanged(
     toggleBtn,
     'aria-label',
-    open ? 'Close chat with Riya' : 'Ask Riya, virtual receptionist'
+    open ? 'Close chat with Riya' : 'Ask Riya, clinic receptionist'
   );
 
   const titleEl = toggleBtn.querySelector('.riya-launcher-label');

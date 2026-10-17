@@ -1,5 +1,5 @@
 /**
- * Smile Dental Clinic, Pune — Primary Website Interactions
+ * Smile Dental Clinic, Pune - Primary Website Interactions
  * Handles mobile menu drawer, treatment service pre-selection, FAQ accordion,
  * and appointment request form confirmation + handoff to Riya.
  */
@@ -72,7 +72,7 @@ function initAppointmentRequestForm() {
     const name = String(formData.get('name') || '').trim();
     const phone = String(formData.get('phone') || '').trim();
     const service = String(formData.get('service') || 'General Checkup & Teeth Cleaning').trim();
-    const preferredWindow = String(formData.get('window') || '').trim();
+    const preferredWindow = String(formData.get('preferredWindow') || '').trim();
     const notes = String(formData.get('notes') || '').trim();
 
     if (!name || !phone) {
