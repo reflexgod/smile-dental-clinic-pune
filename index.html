@@ -1,64 +1,1287 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en-IN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Riya — AI Receptionist for Dental Clinics</title>
-  <meta name="description" content="AI Receptionist for Dental Clinics. Answers patient questions 24/7 and collects appointment requests." />
-  <meta name="theme-color" content="#F5F4EF" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self' https://viraaj19.app.n8n.cloud; base-uri 'self'; form-action 'self'; object-src 'none'" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smile Dental Clinic, Pune — Calm, Contemporary Dental Care &amp; AI Receptionist Demo</title>
+  <meta name="description" content="Experience calm, unhurried dentistry at Smile Dental Clinic, Pune. Explore treatments, studio spaces, and chat live 24/7 with Riya, our AI dental receptionist." />
+  <meta name="theme-color" content="#F7F3EB" />
   <link rel="canonical" href="https://reflexgod.github.io/smile-dental-clinic-pune/" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Smile Dental Clinic, Pune" />
+  <meta property="og:title" content="Smile Dental Clinic, Pune — Calm Dentistry &amp; Live AI Receptionist" />
+  <meta property="og:description" content="Warm, architectural dental care in Pune with Riya, our 24/7 interactive AI receptionist powered by n8n." />
+  <meta property="og:url" content="https://reflexgod.github.io/smile-dental-clinic-pune/" />
+  <meta property="og:image" content="https://reflexgod.github.io/smile-dental-clinic-pune/assets/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script src="./assets/js/early.js"></script>
+
+  <!-- Editorial Typography: Fraunces + Manrope + JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
-  <link rel="stylesheet" href="assets/vendor/n8n-chat/style.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <script type="module" src="assets/js/chat.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400&amp;family=JetBrains+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+
+  <!-- Official @n8n/chat styles & custom architectural stylesheet -->
+  <link rel="stylesheet" href="./assets/vendor/n8n-chat/style.css" />
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="icon" type="image/svg+xml" href="./assets/mascot-riya.svg" />
 </head>
 <body>
-  <div class="workspace">
-    <header class="topbar">
-      <h1>AI Receptionist for Dental Clinics</h1>
-      <p class="topbar__subtitle">Answers patient questions 24/7 and collects appointment requests.</p>
-    </header>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <main class="panel" aria-label="Conversation with Riya">
-      <div class="network-banner" data-network-banner hidden role="status" aria-live="polite">
-        <span data-network-message>Unable to reach the clinic assistant right now.</span>
-        <button type="button" class="network-banner__action" data-network-dismiss>Dismiss</button>
+  <!-- Top Editorial Disclosure & Studio Utility Bar -->
+  <div class="utility-bar" role="region" aria-label="Demo disclosure and clinic hours">
+    <div class="container utility-bar__inner">
+      <p class="utility-bar__disclosure">
+        <span class="utility-bar__tag">Portfolio Demo Concept</span>
+        <span>Fictional clinic brand for Pune dental practices — featuring a live, working n8n AI receptionist.</span>
+      </p>
+      <div class="utility-bar__meta">
+        <span>Mon – Sat · 9:30 AM – 7:30 PM IST</span>
+        <span class="utility-bar__sep" aria-hidden="true">/</span>
+        <span>Koregaon Park, Pune (Sample Location)</span>
       </div>
+    </div>
+  </div>
 
-      <div id="n8n-chat" class="chat-mount"></div>
-
-      <!-- Injected into the participant bar (.chat-header) -->
-      <div class="header-controls" data-header-controls>
-        <span class="status-indicator" data-connection-status>
-          <span class="status-indicator__dot" aria-hidden="true"></span>
-          <span data-connection-label>Online</span>
+  <!-- Sticky Architectural Header -->
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a href="#top" class="brand" aria-label="Smile Dental Clinic, Pune — Home">
+        <span class="brand__emblem" aria-hidden="true">
+          <svg viewBox="0 0 36 36" fill="none">
+            <rect x="1" y="1" width="34" height="34" rx="8" fill="#112230" />
+            <path d="M18 9.5C15.1 9.5 13.3 8 10.8 8C7.6 8 5.8 10.8 5.8 14.5C5.8 18.2 7.4 20.8 8.3 24.3C9 27.1 9.5 31.8 11.8 31.8C13.7 31.8 14.4 28.5 16 27C16.7 26.3 17.3 26 18 26C18.7 26 19.3 26.3 20 27C21.6 28.5 22.3 31.8 24.2 31.8C26.5 31.8 27 27.1 27.7 24.3C28.6 20.8 30.2 18.2 30.2 14.5C30.2 10.8 28.4 8 25.2 8C22.7 8 20.9 9.5 18 9.5Z" stroke="#F7F3EB" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.5 17.5C15.6 19.1 20.4 19.1 21.5 17.5" stroke="#5BC4B8" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
         </span>
-        <button type="button" class="reset-btn" data-reset-chat title="Clear and restart conversation">
-          Reset
+        <span class="brand__text">
+          <span class="brand__name">Smile Dental Clinic</span>
+          <span class="brand__location">Pune · Dental Studio</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="site-nav__list">
+          <li><a href="#philosophy" class="site-nav__link">Philosophy</a></li>
+          <li><a href="#treatments" class="site-nav__link">Treatments</a></li>
+          <li><a href="#doctor" class="site-nav__link">Clinical Team</a></li>
+          <li><a href="#journey" class="site-nav__link">Visit Journey</a></li>
+          <li><a href="#spaces" class="site-nav__link">Our Studio</a></li>
+          <li><a href="#faq" class="site-nav__link">FAQ</a></li>
+          <li><a href="#contact" class="site-nav__link">Visit Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="btn-riya-header" data-open-chat aria-label="Chat with Riya, our AI dental receptionist">
+          <img src="./assets/mascot-riya.svg" alt="" width="26" height="26" class="btn-riya-header__mascot" />
+          <span class="btn-riya-header__dot" aria-hidden="true"></span>
+          <span>Ask Riya</span>
+        </button>
+        <a href="#contact" class="btn btn--primary btn--sm">Request Visit</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="nav-toggle__line"></span>
+          <span class="nav-toggle__line"></span>
         </button>
       </div>
+    </div>
 
-      <!-- Injected into the conversation stream below Riya's opening message -->
-      <div class="starter-group" data-quick-prompts aria-label="Suggested enquiries">
-        <p class="starter-group__label">Suggested enquiries</p>
-        <div class="starter-group__items">
-          <button type="button" class="prompt-chip" data-prompt="What are your charges for a routine check-up and teeth cleaning?">
-            Check-up &amp; cleaning fees
+    <!-- Responsive Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer" hidden>
+      <div class="container mobile-drawer__inner">
+        <ul class="mobile-drawer__list">
+          <li><a href="#philosophy" class="mobile-drawer__link">01 · Our Philosophy</a></li>
+          <li><a href="#treatments" class="mobile-drawer__link">02 · Dental Treatments</a></li>
+          <li><a href="#doctor" class="mobile-drawer__link">03 · Clinical Team</a></li>
+          <li><a href="#journey" class="mobile-drawer__link">04 · Patient Journey &amp; Riya</a></li>
+          <li><a href="#spaces" class="mobile-drawer__link">05 · Studio Spaces</a></li>
+          <li><a href="#comfort" class="mobile-drawer__link">06 · Comfort &amp; Technology</a></li>
+          <li><a href="#faq" class="mobile-drawer__link">07 · Common Questions</a></li>
+          <li><a href="#contact" class="mobile-drawer__link">08 · Hours &amp; Appointment Request</a></li>
+        </ul>
+        <div class="mobile-drawer__cta">
+          <button type="button" class="btn btn--teal btn--full" data-open-chat>
+            <img src="./assets/mascot-riya.svg" alt="" width="24" height="24" />
+            <span>Chat Live with Riya (24/7)</span>
           </button>
-          <button type="button" class="prompt-chip" data-prompt="I'd like to request an appointment for tomorrow evening.">
-            Request an appointment
-          </button>
-          <button type="button" class="prompt-chip" data-prompt="Do you offer root canal treatment and braces consultations?">
-            Root canal &amp; braces
-          </button>
+          <a href="#contact" class="btn btn--outline btn--full">Request an Appointment</a>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. ART-DIRECTED HERO SECTION -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="eyebrow">
+            <span class="eyebrow__index">PUNE · ARCHITECTURAL DENTAL CARE</span>
+          </div>
+
+          <h1 id="hero-heading" class="hero__title">
+            Dentistry designed around <em>calm, clarity,</em> and unhurried care.
+          </h1>
+
+          <p class="hero__lead">
+            We replaced rushed waiting rooms and clinical jargon with warm natural light, gentle diagnostics, and honest conversations—so every visit feels composed from your first question to your final polish.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary">
+              <span>Request an Appointment</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <button type="button" class="btn btn--secondary" data-open-chat>
+              <img src="./assets/mascot-riya.svg" alt="" width="24" height="24" class="btn__mascot-icon" />
+              <span>Chat with Riya</span>
+            </button>
+          </div>
+
+          <!-- Signature Riya Mascot Concierge Card in Hero -->
+          <div class="riya-concierge-card" role="region" aria-label="Riya AI Receptionist quick start">
+            <div class="riya-concierge-card__header">
+              <div class="riya-avatar-wrap">
+                <img src="./assets/mascot-riya.svg" alt="Riya, the friendly tooth mascot of Smile Dental Clinic" width="56" height="56" class="riya-avatar-wrap__img" />
+                <span class="riya-avatar-wrap__badge" title="Online 24/7"></span>
+              </div>
+              <div class="riya-concierge-card__intro">
+                <div class="riya-concierge-card__title-row">
+                  <h2 class="riya-concierge-card__name">Meet Riya · Reception Assistant</h2>
+                  <span class="status-tag" id="hero-riya-status">Live 24/7</span>
+                </div>
+                <p class="riya-concierge-card__quote">
+                  “Hi! I’m Riya from Smile Dental Clinic, Pune. Ask me about treatments, sensitivity care, or share a preferred time for your visit.”
+                </p>
+              </div>
+            </div>
+            <div class="riya-concierge-card__prompts" aria-label="Sample questions to ask Riya">
+              <span class="riya-concierge-card__prompt-label">Try asking Riya:</span>
+              <div class="riya-prompt-group">
+                <button type="button" class="prompt-chip" data-chat-prompt="I'd like to request a teeth cleaning and checkup appointment this week.">
+                  Request a cleaning &amp; checkup
+                </button>
+                <button type="button" class="prompt-chip" data-chat-prompt="I have tooth pain when drinking something cold. How soon can I request a visit?">
+                  Tooth sensitivity or ache
+                </button>
+                <button type="button" class="prompt-chip" data-chat-prompt="What happens during a first dental consultation at Smile Dental Clinic?">
+                  First visit process
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Asymmetric Art-Directed Visual Column -->
+        <div class="hero__visual">
+          <figure class="hero__main-frame">
+            <img
+              src="./assets/images/hero-896.webp"
+              srcset="./assets/images/hero-720.webp 720w, ./assets/images/hero-896.webp 896w"
+              sizes="(max-width: 960px) 92vw, 44vw"
+              width="896"
+              height="1120"
+              alt="Sunlit minimal dental suite at Smile Dental Clinic with warm fluted oak cabinetry, indoor greenery, and a comfortable modern treatment chair"
+              fetchpriority="high"
+            />
+            <figcaption class="hero__caption">
+              <span class="hero__caption-num">SUITE 01</span>
+              <span>Natural daylight, warm white oak, and quiet acoustic insulation.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="hero__inset-frame">
+            <img
+              src="./assets/images/smile-640.webp"
+              width="640"
+              height="640"
+              alt="Relaxed patient smiling naturally in warm daylight"
+              loading="lazy"
+            />
+            <figcaption class="hero__inset-caption">
+              Conservative, natural-looking outcomes tailored to your face.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. THOUGHTFUL CLINIC INTRODUCTION / PHILOSOPHY -->
+    <section class="section section--bordered" id="philosophy" aria-labelledby="philosophy-heading">
+      <div class="container">
+        <div class="editorial-split">
+          <div class="editorial-split__left">
+            <span class="section-index">01 / OUR PHILOSOPHY</span>
+            <h2 id="philosophy-heading" class="section-title">
+              A dental studio built for people who usually dread the dentist.
+            </h2>
+          </div>
+          <div class="editorial-split__right">
+            <p class="editorial-prose editorial-prose--large">
+              Most dental anxiety comes from feeling rushed, uninformed, or catching the harsh sterile glare of a traditional clinic. When we conceived Smile Dental Clinic for Pune, we started with a simpler question: <em>what helps a person breathe easier the moment they walk in?</em>
+            </p>
+            <p class="editorial-prose">
+              It begins before you even arrive—with Riya answering your questions clearly at any hour without pressure. And when you step into the studio, you are met with warm plaster walls, longer appointment buffers, intraoral camera walkthroughs on a screen you can actually understand, and written treatment options before any clinical work begins.
+            </p>
+          </div>
+        </div>
+
+        <div class="pillar-grid" role="list">
+          <article class="pillar-card" role="listitem">
+            <span class="pillar-card__num">I</span>
+            <h3 class="pillar-card__title">Unhurried appointment pacing</h3>
+            <p class="pillar-card__body">
+              We schedule generous buffers between visits so your dentist has time to listen, numb gently, and pause whenever you raise a hand.
+            </p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <span class="pillar-card__num">II</span>
+            <h3 class="pillar-card__title">See what we see, in plain language</h3>
+            <p class="pillar-card__body">
+              Using high-definition intraoral photography and low-dose digital scans, we show you exactly what needs attention—and what simply needs monitoring.
+            </p>
+          </article>
+          <article class="pillar-card" role="listitem">
+            <span class="pillar-card__num">III</span>
+            <h3 class="pillar-card__title">24/7 clarity with Riya + human care</h3>
+            <p class="pillar-card__body">
+              Late-night toothache or curious about aligners? Riya answers questions immediately and logs your preferred visit window for our reception team to confirm.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. DENTAL TREATMENT CATEGORIES & SERVICE DETAILS -->
+    <section class="section section--sand" id="treatments" aria-labelledby="treatments-heading">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-index">02 / CLINICAL TREATMENTS</span>
+            <h2 id="treatments-heading" class="section-title">
+              Thoughtful care across five core disciplines.
+            </h2>
+          </div>
+          <p class="section-header-row__sub">
+            Every treatment plan prioritises tooth preservation, comfort-first anaesthesia, and transparent staging. Select any discipline below or ask Riya how it applies to your situation.
+          </p>
+        </div>
+
+        <div class="treatments-layout">
+          <!-- Treatment Category Selector Tabs (Accessible progressive enhancement) -->
+          <div class="treatment-index" role="tablist" aria-label="Dental treatment categories">
+            <button
+              type="button"
+              class="treatment-tab is-active"
+              role="tab"
+              id="tab-general"
+              aria-selected="true"
+              aria-controls="panel-general"
+              data-treatment-tab="general"
+            >
+              <span class="treatment-tab__num">01</span>
+              <span class="treatment-tab__name">General &amp; Preventive Dentistry</span>
+              <span class="treatment-tab__meta">Checkups · Fillings · Root Canal Care</span>
+            </button>
+
+            <button
+              type="button"
+              class="treatment-tab"
+              role="tab"
+              id="tab-cleaning"
+              aria-selected="false"
+              aria-controls="panel-cleaning"
+              data-treatment-tab="cleaning"
+            >
+              <span class="treatment-tab__num">02</span>
+              <span class="treatment-tab__name">Teeth Cleaning &amp; Gum Therapy</span>
+              <span class="treatment-tab__meta">Ultrasonic Scaling · Stain Polish · Hygiene</span>
+            </button>
+
+            <button
+              type="button"
+              class="treatment-tab"
+              role="tab"
+              id="tab-cosmetic"
+              aria-selected="false"
+              aria-controls="panel-cosmetic"
+              data-treatment-tab="cosmetic"
+            >
+              <span class="treatment-tab__num">03</span>
+              <span class="treatment-tab__name">Cosmetic Dentistry &amp; Smile Design</span>
+              <span class="treatment-tab__meta">Bonding · Minimal-Prep Veneers · Whitening</span>
+            </button>
+
+            <button
+              type="button"
+              class="treatment-tab"
+              role="tab"
+              id="tab-implants"
+              aria-selected="false"
+              aria-controls="panel-implants"
+              data-treatment-tab="implants"
+            >
+              <span class="treatment-tab__num">04</span>
+              <span class="treatment-tab__name">Guided Dental Implants</span>
+              <span class="treatment-tab__meta">Single Tooth · Bridges · 3D CBCT Planning</span>
+            </button>
+
+            <button
+              type="button"
+              class="treatment-tab"
+              role="tab"
+              id="tab-ortho"
+              aria-selected="false"
+              aria-controls="panel-ortho"
+              data-treatment-tab="ortho"
+            >
+              <span class="treatment-tab__num">05</span>
+              <span class="treatment-tab__name">Orthodontics &amp; Clear Aligners</span>
+              <span class="treatment-tab__meta">3D Digital Scans · Discreet Aligners · Retainers</span>
+            </button>
+          </div>
+
+          <!-- Treatment Detail Panels -->
+          <div class="treatment-panels">
+            <!-- Panel 01: General Dentistry -->
+            <article
+              class="treatment-panel is-active"
+              role="tabpanel"
+              id="panel-general"
+              aria-labelledby="tab-general"
+              data-treatment-panel="general"
+            >
+              <div class="treatment-panel__top">
+                <span class="treatment-panel__kicker">01 · GENERAL &amp; PREVENTIVE DENTISTRY</span>
+                <h3 class="treatment-panel__title">Foundational care that protects your natural enamel.</h3>
+                <p class="treatment-panel__desc">
+                  Rather than waiting for a toothache, our preventive consultations map enamel wear, gum attachment, and bite balance early. When a restoration is needed, we use biomimetic, tooth-shaded ceramics and composites that bond seamlessly to healthy structure.
+                </p>
+              </div>
+
+              <div class="treatment-panel__details">
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">What is included</h4>
+                  <ul class="treatment-list">
+                    <li>Comprehensive oral health &amp; bite evaluation with intraoral photos</li>
+                    <li>Low-radiation digital radiographs only when clinically indicated</li>
+                    <li>Mercury-free, shade-matched composite restorations (fillings)</li>
+                    <li>Single-visit or staged rotary root canal therapy under rubber dam isolation</li>
+                    <li>Custom nightguards for clenching and bruxism protection</li>
+                  </ul>
+                </div>
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">Typical visit rhythm</h4>
+                  <dl class="treatment-meta-dl">
+                    <div>
+                      <dt>Initial Consultation</dt>
+                      <dd>40 – 45 minutes including camera tour &amp; written plan</dd>
+                    </div>
+                    <div>
+                      <dt>Comfort Protocol</dt>
+                      <dd>Topical numbing gel applied 3 minutes before any local anaesthetic</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="treatment-panel__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-chat-prompt="I'd like to ask about a general dental checkup or filling at Smile Dental Clinic."
+                >
+                  Ask Riya about General Dentistry
+                </button>
+                <a href="#contact" class="btn btn--outline" data-select-service="General Checkup & Consultation">
+                  Request Checkup Slot
+                </a>
+              </div>
+            </article>
+
+            <!-- Panel 02: Teeth Cleaning -->
+            <article
+              class="treatment-panel"
+              role="tabpanel"
+              id="panel-cleaning"
+              aria-labelledby="tab-cleaning"
+              data-treatment-panel="cleaning"
+              hidden
+            >
+              <div class="treatment-panel__top">
+                <span class="treatment-panel__kicker">02 · TEETH CLEANING &amp; GUM THERAPY</span>
+                <h3 class="treatment-panel__title">Gentle ultrasonic hygiene tailored for sensitive gums.</h3>
+                <p class="treatment-panel__desc">
+                  Routine scaling should never feel rough or scraping. We use fine-tip piezo ultrasonics with warm water irrigation and low-abrasion polishing pastes to lift hardened tartar and tea or coffee staining while keeping exposed root surfaces calm.
+                </p>
+              </div>
+
+              <div class="treatment-panel__details">
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">What is included</h4>
+                  <ul class="treatment-list">
+                    <li>Periodontal pocket charting and gum inflammation assessment</li>
+                    <li>Gentle piezoelectric ultrasonic scaling above and below the gumline</li>
+                    <li>Fine stain removal for coffee, chai, and everyday discolouration</li>
+                    <li>Desensitising fluoride or nano-hydroxyapatite enamel conditioning</li>
+                    <li>Personalised interdental brush and home-care coaching</li>
+                  </ul>
+                </div>
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">Typical visit rhythm</h4>
+                  <dl class="treatment-meta-dl">
+                    <div>
+                      <dt>Session Duration</dt>
+                      <dd>45 minutes (single visit for routine hygiene; staged for deep gum care)</dd>
+                    </div>
+                    <div>
+                      <dt>Recommended Cadence</dt>
+                      <dd>Every 6 months for healthy gums; every 3–4 months for periodontal maintenance</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="treatment-panel__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-chat-prompt="I want to request a teeth cleaning and polishing appointment. What slots are available?"
+                >
+                  Ask Riya about Teeth Cleaning
+                </button>
+                <a href="#contact" class="btn btn--outline" data-select-service="Teeth Cleaning & Polishing">
+                  Request Hygiene Visit
+                </a>
+              </div>
+            </article>
+
+            <!-- Panel 03: Cosmetic Dentistry -->
+            <article
+              class="treatment-panel"
+              role="tabpanel"
+              id="panel-cosmetic"
+              aria-labelledby="tab-cosmetic"
+              data-treatment-panel="cosmetic"
+              hidden
+            >
+              <div class="treatment-panel__top">
+                <span class="treatment-panel__kicker">03 · COSMETIC DENTISTRY &amp; SMILE DESIGN</span>
+                <h3 class="treatment-panel__title">Subtle, natural-looking aesthetics—never artificial or over-prepped.</h3>
+                <p class="treatment-panel__desc">
+                  Great cosmetic work respects natural tooth texture, translucency, and facial proportions. Whether brightening shade by a few natural tones or refining chipped edges with conservative bonding, you preview the proposed shape before committing.
+                </p>
+              </div>
+
+              <div class="treatment-panel__details">
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">What is included</h4>
+                  <ul class="treatment-list">
+                    <li>Sensitivity-managed in-studio and take-home enamel whitening</li>
+                    <li>Additive micro-layered composite edge bonding (often zero drilling)</li>
+                    <li>Ultra-thin, minimal-preparation porcelain veneers crafted with master ceramists</li>
+                    <li>Trial smile mockups so you can see and feel changes in natural light</li>
+                    <li>Replacement of dark, aging metal-fused crowns with all-ceramic restorations</li>
+                  </ul>
+                </div>
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">Typical visit rhythm</h4>
+                  <dl class="treatment-meta-dl">
+                    <div>
+                      <dt>Smile Discovery</dt>
+                      <dd>45-minute digital photography &amp; shade consultation</dd>
+                    </div>
+                    <div>
+                      <dt>Guiding Principle</dt>
+                      <dd>Least invasive option first—bonding or whitening before ceramic prep</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="treatment-panel__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-chat-prompt="I'm interested in cosmetic dentistry (whitening, bonding, or veneers). How does a consultation work?"
+                >
+                  Ask Riya about Cosmetic Care
+                </button>
+                <a href="#contact" class="btn btn--outline" data-select-service="Cosmetic Dentistry / Whitening">
+                  Request Smile Consultation
+                </a>
+              </div>
+            </article>
+
+            <!-- Panel 04: Dental Implants -->
+            <article
+              class="treatment-panel"
+              role="tabpanel"
+              id="panel-implants"
+              aria-labelledby="tab-implants"
+              data-treatment-panel="implants"
+              hidden
+            >
+              <div class="treatment-panel__top">
+                <span class="treatment-panel__kicker">04 · GUIDED DENTAL IMPLANTS</span>
+                <h3 class="treatment-panel__title">Precision 3D-planned replacements for missing teeth.</h3>
+                <p class="treatment-panel__desc">
+                  Replacing a missing tooth protects neighbouring teeth from drifting and preserves jawbone volume. We combine 3D cone-beam imaging with digital surgical guides so placement is predictable, minimally invasive, and comfortable during recovery.
+                </p>
+              </div>
+
+              <div class="treatment-panel__details">
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">What is included</h4>
+                  <ul class="treatment-list">
+                    <li>3D CBCT bone volume and nerve-pathway assessment</li>
+                    <li>Digitally guided biocompatible titaniumimplant placement</li>
+                    <li>Custom-milled zirconia and porcelain screw-retained crowns</li>
+                    <li>Implant-supported bridges for multiple missing teeth</li>
+                    <li>Clear written timeline covering healing phases and maintenance</li>
+                  </ul>
+                </div>
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">Typical visit rhythm</h4>
+                  <dl class="treatment-meta-dl">
+                    <div>
+                      <dt>Planning &amp; Scan Review</dt>
+                      <dd>45-minute consultation with 3D bone and prosthetic roadmap</dd>
+                    </div>
+                    <div>
+                      <dt>Healing Timeline</dt>
+                      <dd>Typically 8 – 14 weeks of osseointegration before final crown fit</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="treatment-panel__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-chat-prompt="I want to learn about dental implants for a missing tooth and request an evaluation."
+                >
+                  Ask Riya about Dental Implants
+                </button>
+                <a href="#contact" class="btn btn--outline" data-select-service="Dental Implants Consultation">
+                  Request Implant Evaluation
+                </a>
+              </div>
+            </article>
+
+            <!-- Panel 05: Orthodontics -->
+            <article
+              class="treatment-panel"
+              role="tabpanel"
+              id="panel-ortho"
+              aria-labelledby="tab-ortho"
+              data-treatment-panel="ortho"
+              hidden
+            >
+              <div class="treatment-panel__top">
+                <span class="treatment-panel__kicker">05 · ORTHODONTICS &amp; CLEAR ALIGNERS</span>
+                <h3 class="treatment-panel__title">Discreet alignment guided by 3D optical scans—no messy putty.</h3>
+                <p class="treatment-panel__desc">
+                  Whether addressing crowding, spacing, or orthodontic relapse from years ago, we capture a digital 3D model of your teeth in minutes. You can review the staged movement simulation on screen and choose clear aligners or low-profile braces that fit your routine.
+                </p>
+              </div>
+
+              <div class="treatment-panel__details">
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">What is included</h4>
+                  <ul class="treatment-list">
+                    <li>3D intraoral optical scanning (no gag-inducing impression trays)</li>
+                    <li>Stage-by-stage digital tooth movement simulation</li>
+                    <li>Removable, transparent medical-grade aligner trays for adults &amp; teens</li>
+                    <li>Bite equilibration and arch expansion guidance</li>
+                    <li>Custom fixed and removable Vivera-style retainers upon completion</li>
+                  </ul>
+                </div>
+                <div class="treatment-detail-col">
+                  <h4 class="treatment-detail-col__heading">Typical visit rhythm</h4>
+                  <dl class="treatment-meta-dl">
+                    <div>
+                      <dt>Check-in Cadence</dt>
+                      <dd>Brief 20-minute progress reviews every 6 – 8 weeks</dd>
+                    </div>
+                    <div>
+                      <dt>Everyday Flexibility</dt>
+                      <dd>Remove trays easily for meals, coffee, brushing, and important events</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <div class="treatment-panel__actions">
+                <button
+                  type="button"
+                  class="btn btn--primary"
+                  data-chat-prompt="I'm curious about clear aligners and orthodontics. How do I book an aligner scan?"
+                >
+                  Ask Riya about Clear Aligners
+                </button>
+                <a href="#contact" class="btn btn--outline" data-select-service="Clear Aligners & Orthodontics">
+                  Request Aligner Scan
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. DENTIST & CLINICAL TEAM INTRODUCTION (CLEAR DEMO DISCLOSURE) -->
+    <section class="section" id="doctor" aria-labelledby="doctor-heading">
+      <div class="container">
+        <div class="doctor-showcase">
+          <div class="doctor-showcase__media">
+            <figure class="doctor-frame">
+              <img
+                src="./assets/images/dentist-720.webp"
+                width="720"
+                height="900"
+                alt="Illustrative portrait of a calm lead dentist in sage clinical attire in a sunlit wood and plaster dental studio"
+                loading="lazy"
+              />
+              <figcaption class="doctor-frame__badge">
+                <span>Demo Clinical Profile · Customised per Practice</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="doctor-showcase__copy">
+            <span class="section-index">03 / CLINICAL LEADERSHIP</span>
+            <h2 id="doctor-heading" class="section-title">
+              Led by clinicians who listen first and treat second.
+            </h2>
+
+            <div class="demo-profile-notice" role="note">
+              <strong>Portfolio Demo Note:</strong> To maintain strict clinical integrity, this demo does not invent real DCI registration numbers or fabricated doctor biographies. When deployed for a real clinic, this section highlights the principal dentist’s verified MDS/BDS credentials, clinical focus, and care team.
+            </div>
+
+            <p class="editorial-prose">
+              At Smile Dental Clinic, every consultation begins in a quiet conversation corner—not reclined under an operating lamp. Our restorative, periodontal, and orthodontic clinicians collaborate under one roof so you never feel passed around without context.
+            </p>
+
+            <div class="doctor-principles">
+              <div class="doctor-principle">
+                <h3 class="doctor-principle__title">Conservative Tooth Preservation</h3>
+                <p class="doctor-principle__text">
+                  We prioritise preserving natural enamel and pulp vitality, explaining the pros, cons, and longevity of every restorative choice.
+                </p>
+              </div>
+              <div class="doctor-principle">
+                <h3 class="doctor-principle__title">Anxiety-Sensitive Pacing</h3>
+                <p class="doctor-principle__text">
+                  Every patient has a simple stop-signal agreement: raise your hand at any moment, and we pause immediately to check in.
+                </p>
+              </div>
+            </div>
+
+            <div class="doctor-showcase__cta">
+              <button
+                type="button"
+                class="btn btn--secondary"
+                data-chat-prompt="Can you tell me what to expect during my first consultation with the dentist?"
+              >
+                Ask Riya how first consultations work
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PATIENT-FIRST VISIT JOURNEY & SIGNATURE RIYA MASCOT SPOTLIGHT -->
+    <section class="section section--navy" id="journey" aria-labelledby="journey-heading">
+      <div class="container">
+        <div class="journey-header">
+          <div class="journey-header__text">
+            <span class="section-index section-index--light">04 / YOUR VISIT JOURNEY</span>
+            <h2 id="journey-heading" class="section-title section-title--light">
+              From a late-night question to a calm morning appointment.
+            </h2>
+            <p class="journey-header__sub">
+              Whether you prefer chatting with Riya at 11 PM or submitting a structured request below, our process is designed so you never have to play phone tag with a busy front desk.
+            </p>
+          </div>
+
+          <!-- Signature Riya Mascot Feature Card -->
+          <aside class="riya-spotlight" aria-label="About Riya, the AI Dental Receptionist">
+            <div class="riya-spotlight__mascot-stage">
+              <img
+                src="./assets/mascot-riya.svg"
+                alt="Riya mascot — friendly ivory tooth character wearing a muted teal collar scarf"
+                width="96"
+                height="96"
+                class="riya-spotlight__mascot"
+              />
+            </div>
+            <div class="riya-spotlight__content">
+              <span class="riya-spotlight__eyebrow">MEET RIYA · AI RECEPTION CONCIERGE</span>
+              <h3 class="riya-spotlight__title">Helpful 24/7. Honest about every step.</h3>
+              <p class="riya-spotlight__body">
+                Riya answers questions about treatments, preparation, and clinic timings right away, and collects your preferred appointment details. She never fabricates confirmed calendar slots—our human coordinator always follows up to lock in your exact time.
+              </p>
+              <button type="button" class="btn btn--teal-light" data-open-chat>
+                Start a Conversation with Riya
+              </button>
+            </div>
+          </aside>
+        </div>
+
+        <ol class="journey-steps">
+          <li class="journey-step">
+            <div class="journey-step__top">
+              <span class="journey-step__num">STEP 01</span>
+              <span class="journey-step__tag">Instant · 24/7</span>
+            </div>
+            <h3 class="journey-step__title">Ask Riya or share your concern</h3>
+            <p class="journey-step__desc">
+              Open the Riya chat window in the corner (or use our request form) to ask about a symptom, treatment option, or preferred day and time.
+            </p>
+          </li>
+
+          <li class="journey-step">
+            <div class="journey-step__top">
+              <span class="journey-step__num">STEP 02</span>
+              <span class="journey-step__tag">Real-Time Lead Capture</span>
+            </div>
+            <h3 class="journey-step__title">Your request reaches our desk</h3>
+            <p class="journey-step__desc">
+              Riya records your name, contact number, concern, and preferred window and sends an immediate notification to our clinic reception team.
+            </p>
+          </li>
+
+          <li class="journey-step">
+            <div class="journey-step__top">
+              <span class="journey-step__num">STEP 03</span>
+              <span class="journey-step__tag">Human Verification</span>
+            </div>
+            <h3 class="journey-step__title">Personal slot confirmation</h3>
+            <p class="journey-step__desc">
+              Our front-desk coordinator checks live clinician schedules and confirms your exact appointment slot via phone or WhatsApp, along with directions.
+            </p>
+          </li>
+
+          <li class="journey-step">
+            <div class="journey-step__top">
+              <span class="journey-step__num">STEP 04</span>
+              <span class="journey-step__tag">In the Studio</span>
+            </div>
+            <h3 class="journey-step__title">Unhurried consultation &amp; clear plan</h3>
+            <p class="journey-step__desc">
+              Arrive to a calm reception lounge, review digital photographs together with your dentist, and receive a transparent written plan before any procedure.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 6. CURATED CLINIC IMAGERY & STUDIO SPACES GALLERY -->
+    <section class="section" id="spaces" aria-labelledby="spaces-heading">
+      <div class="container">
+        <div class="section-header-row">
+          <div>
+            <span class="section-index">05 / ARCHITECTURAL INTERIORS</span>
+            <h2 id="spaces-heading" class="section-title">
+              Warm oak, limewash plaster, and quiet precision.
+            </h2>
+          </div>
+          <p class="section-header-row__sub">
+            Inspired by hospitality spaces rather than hospitals, every room in our studio uses tactile natural materials and soft indirect lighting to lower sensory stress.
+          </p>
+        </div>
+
+        <div class="studio-gallery">
+          <figure class="gallery-card gallery-card--wide">
+            <div class="gallery-card__img-wrap">
+              <img
+                src="./assets/images/reception-1264.webp"
+                srcset="./assets/images/reception-800.webp 800w, ./assets/images/reception-1264.webp 1264w"
+                sizes="(max-width: 960px) 92vw, 58vw"
+                width="1264"
+                height="848"
+                alt="Minimalist dental clinic arrival lounge with curved white oak reception desk, linen seating, and warm lighting"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-card__caption">
+              <span class="gallery-card__tag">01 · ARRIVAL LOUNGE</span>
+              <p>Curved white-oak reception counter and breathable linen seating—no crowded rows of plastic chairs or blaring television screens.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card gallery-card--tall">
+            <div class="gallery-card__img-wrap">
+              <img
+                src="./assets/images/hero-896.webp"
+                srcset="./assets/images/hero-720.webp 720w, ./assets/images/hero-896.webp 896w"
+                sizes="(max-width: 960px) 92vw, 36vw"
+                width="896"
+                height="1120"
+                alt="Daylit treatment suite with ergonomic white dental chair and warm wood cabinetry"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-card__caption">
+              <span class="gallery-card__tag">02 · TREATMENT SUITE</span>
+              <p>Acoustic privacy doors, garden-facing daylight, and concealed clinical cabinetry keep instruments out of sight until needed.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <div class="gallery-card__img-wrap">
+              <img
+                src="./assets/images/studio-1264.webp"
+                srcset="./assets/images/studio-800.webp 800w, ./assets/images/studio-1264.webp 1264w"
+                sizes="(max-width: 960px) 92vw, 46vw"
+                width="1264"
+                height="848"
+                alt="Consultation corner with limewash plaster walls, oak shelving, and modern 3D intraoral scanner"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-card__caption">
+              <span class="gallery-card__tag">03 · CONSULTATION &amp; 3D SCANNING</span>
+              <p>Radiation-free 3D optical impressions captured in minutes for clear aligners, crowns, and occlusal study.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <div class="gallery-card__img-wrap">
+              <img
+                src="./assets/images/care-1264.webp"
+                srcset="./assets/images/care-800.webp 800w, ./assets/images/care-1264.webp 1264w"
+                sizes="(max-width: 960px) 92vw, 46vw"
+                width="1264"
+                height="848"
+                alt="Dentist in teal gloves arranging individually pouched sterile dental instruments"
+                loading="lazy"
+              />
+            </div>
+            <figcaption class="gallery-card__caption">
+              <span class="gallery-card__tag">04 · CLASS-B STERILIZATION PROTOCOL</span>
+              <p>Every handpiece and instrument undergoes ultrasonic cleaning, sealed autoclaving, and spore-tested verification before your visit.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. COMFORT, CARE & CLINICAL TECHNOLOGY -->
+    <section class="section section--sand" id="comfort" aria-labelledby="comfort-heading">
+      <div class="container">
+        <div class="editorial-split">
+          <div class="editorial-split__left">
+            <span class="section-index">06 / COMFORT &amp; TECHNOLOGY</span>
+            <h2 id="comfort-heading" class="section-title">
+              Gentle on the senses. Exact in the details.
+            </h2>
+          </div>
+          <div class="editorial-split__right">
+            <p class="editorial-prose">
+              Modern dental technology should make appointments quieter, faster, and less invasive. We pair sensory comfort touches with high-precision diagnostics so there is never any guesswork.
+            </p>
+          </div>
+        </div>
+
+        <div class="comfort-grid">
+          <div class="comfort-column">
+            <h3 class="comfort-column__heading">Sensory Comfort Details</h3>
+            <ul class="comfort-list">
+              <li>
+                <strong>Two-Stage Gentle Numbing</strong>
+                <span>We apply a warming topical anaesthetic gel before slow, pressure-controlled local anaesthesia so you barely feel a pinch.</span>
+              </li>
+              <li>
+                <strong>Quiet Electric Handpieces</strong>
+                <span>Precision electric micro-motors dramatically reduce the high-pitched vibration and sound associated with older air-driven drills.</span>
+              </li>
+              <li>
+                <strong>Warm Water Hygiene</strong>
+                <span>Our ultrasonic scalers use temperature-regulated water so sensitive teeth are never shocked by cold spray during cleanings.</span>
+              </li>
+              <li>
+                <strong>Rest Breaks Anytime</strong>
+                <span>Bite cushions for jaw support and unhurried pauses whenever you want to rinse, ask a question, or simply catch your breath.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="comfort-column">
+            <h3 class="comfort-column__heading">Diagnostic &amp; Hygiene Standards</h3>
+            <ul class="comfort-list">
+              <li>
+                <strong>3D Intraoral Optical Scanner</strong>
+                <span>Replaces uncomfortable gag-inducing putty trays with a wand that builds a full-colour 3D model of your teeth in seconds.</span>
+              </li>
+              <li>
+                <strong>Low-Dose Digital Radiography</strong>
+                <span>Instant digital sensors reduce radiation exposure compared to conventional film while revealing tiny interproximal changes early.</span>
+              </li>
+              <li>
+                <strong>Multi-Stage Autoclave Sterilization</strong>
+                <span>Sealed instrument pouches are opened in front of you at the start of every appointment, backed by logged Class-B sterilization cycles.</span>
+              </li>
+              <li>
+                <strong>Written Treatment Roadmaps</strong>
+                <span>Before any restorative or cosmetic care begins, you receive a clear breakdown of stages, alternatives, and expected timelines.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INTERACTIVE FAQ SECTION -->
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="container faq-layout">
+        <div class="faq-layout__intro">
+          <span class="section-index">07 / COMMON QUESTIONS</span>
+          <h2 id="faq-heading" class="section-title">
+            Thoughtful answers before you step into the clinic.
+          </h2>
+          <p class="faq-layout__sub">
+            Have a specific question not listed here? Riya is online right now in the corner of your screen and can answer questions about treatments, sensitivity, or scheduling.
+          </p>
+          <div class="faq-riya-box">
+            <img src="./assets/mascot-riya.svg" alt="" width="44" height="44" />
+            <div>
+              <strong>Prefer a live answer?</strong>
+              <p>Ask Riya in plain language—she responds in seconds.</p>
+              <button type="button" class="link-btn" data-open-chat>Open chat with Riya →</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-accordion" id="faq-accordion">
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="true"
+                aria-controls="faq-panel-1"
+                id="faq-btn-1"
+              >
+                <span>How does booking through Riya work? Is my slot immediately confirmed?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-1" role="region" aria-labelledby="faq-btn-1">
+              <p>
+                Riya is our 24/7 AI dental receptionist. When you chat with her (or submit the request form below), she answers your questions and records your name, contact details, dental concern, and preferred visit window. Because we coordinate chair time carefully around each procedure, Riya logs an <strong>appointment request</strong>—our human front-desk coordinator then contacts you directly to confirm the exact slot.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+                id="faq-btn-2"
+              >
+                <span>I feel anxious about dental visits. How do you handle nervous patients?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-2" role="region" aria-labelledby="faq-btn-2" hidden>
+              <p>
+                You are in very good company—more than half of our new patients mention some degree of dental apprehension. Your first appointment never jumps straight into drilling. We begin with a calm conversation, use intraoral photos to show you what is happening, apply topical numbing gel before any local anaesthetic, and pause immediately whenever you raise your hand.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+                id="faq-btn-3"
+              >
+                <span>What happens during a first consultation and checkup?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-3" role="region" aria-labelledby="faq-btn-3" hidden>
+              <p>
+                We reserve 40 to 45 minutes for your initial visit. We discuss your dental history and any specific concerns, perform a thorough tooth-by-tooth and gum assessment, capture high-resolution intraoral photographs (and digital X-rays only if clinically necessary), and walk through our findings together on screen so you leave with a clear, written plan.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+                id="faq-btn-4"
+              >
+                <span>What if I have sudden tooth pain or a broken filling?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-4" role="region" aria-labelledby="faq-btn-4" hidden>
+              <p>
+                We keep dedicated daily buffers for urgent toothaches, swelling, or chipped restorations. Tell Riya about your symptoms in the chat widget right away—mentioning whether pain is triggered by hot/cold or biting—and our team will prioritise your request for the earliest available relief slot.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <h3 class="faq-item__heading">
+              <button
+                type="button"
+                class="faq-trigger"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+                id="faq-btn-5"
+              >
+                <span>Is Smile Dental Clinic, Pune a real operating clinic?</span>
+                <span class="faq-trigger__icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="faq-panel" id="faq-panel-5" role="region" aria-labelledby="faq-btn-5" hidden>
+              <p>
+                Smile Dental Clinic, Pune is a <strong>production portfolio demonstration</strong> created to showcase how an editorial dental clinic website and a live 24/7 n8n AI receptionist work together. While the clinic name and address are illustrative placeholders, <strong>Riya is a real, working AI receptionist connected to a live n8n workflow</strong>—you can test a full patient conversation and appointment request right now.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. CONTACT, HOURS, LOCATION PLACEHOLDERS & APPOINTMENT REQUEST FLOW -->
+    <section class="section section--bordered section--warm" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Left: Studio Location, Hours & Direct Riya Trigger -->
+          <div class="contact-info">
+            <span class="section-index">08 / VISIT &amp; ENQUIRE</span>
+            <h2 id="contact-heading" class="section-title">
+              Request an appointment or chat with Riya now.
+            </h2>
+            <p class="contact-info__lead">
+              Share your preferred time using the request form, or open Riya’s chat window to ask questions and book conversationally. Both connect directly to our live receptionist workflow.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-detail-card">
+                <span class="contact-detail-card__label">STUDIO LOCATION (DEMO PLACEHOLDER)</span>
+                <strong class="contact-detail-card__value">Suite 204, Serene Atrium, Lane 7, Koregaon Park</strong>
+                <span class="contact-detail-card__sub">Pune, Maharashtra 411001 · Valet &amp; Ground-Floor Lift Access</span>
+              </div>
+
+              <div class="contact-detail-card">
+                <span class="contact-detail-card__label">CONSULTATION HOURS</span>
+                <dl class="hours-list">
+                  <div>
+                    <dt>Monday – Friday</dt>
+                    <dd>9:30 AM – 7:30 PM</dd>
+                  </div>
+                  <div>
+                    <dt>Saturday</dt>
+                    <dd>10:00 AM – 6:00 PM</dd>
+                  </div>
+                  <div>
+                    <dt>Sunday</dt>
+                    <dd>Closed (Riya AI Receptionist online 24/7)</dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="contact-detail-card">
+                <span class="contact-detail-card__label">DIRECT CONTACT PLACEHOLDERS</span>
+                <strong class="contact-detail-card__value">Reception Desk: +91 (020) 0000-0000 (Sample)</strong>
+                <span class="contact-detail-card__sub">hello@smiledentalpune.example · Live chat active bottom-right</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Structured Appointment Request Form (Wired to Riya n8n Chat) -->
+          <div class="appointment-card">
+            <div class="appointment-card__header">
+              <img src="./assets/mascot-riya.svg" alt="" width="42" height="42" />
+              <div>
+                <h3 class="appointment-card__title">Request an Appointment</h3>
+                <p class="appointment-card__sub">
+                  Submitting this form sends your details straight to Riya in our live chat so she can log your request immediately.
+                </p>
+              </div>
+            </div>
+
+            <form id="appointment-request-form" class="appointment-form" novalidate>
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="patient-name">Full Name <span aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="patient-name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="e.g., Ananya Deshmukh"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="patient-phone">Phone / WhatsApp <span aria-hidden="true">*</span></label>
+                  <input
+                    type="tel"
+                    id="patient-phone"
+                    name="phone"
+                    required
+                    autocomplete="tel"
+                    placeholder="e.g., +91 98765 43210"
+                  />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="patient-service">Treatment or Concern</label>
+                  <select id="patient-service" name="service">
+                    <option value="General Checkup & Consultation">General Checkup &amp; Consultation</option>
+                    <option value="Teeth Cleaning & Polishing">Teeth Cleaning &amp; Polishing</option>
+                    <option value="Tooth Pain or Sensitivity">Tooth Pain or Sensitivity Relief</option>
+                    <option value="Cosmetic Dentistry / Whitening">Cosmetic Dentistry / Smile Design</option>
+                    <option value="Dental Implants Consultation">Dental Implants Evaluation</option>
+                    <option value="Clear Aligners & Orthodontics">Clear Aligners &amp; Orthodontics</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="patient-window">Preferred Day &amp; Window</label>
+                  <input
+                    type="text"
+                    id="patient-window"
+                    name="window"
+                    placeholder="e.g., Thursday afternoon or Saturday morning"
+                  />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="patient-notes">Anything you’d like us to know? (Optional)</label>
+                <textarea
+                  id="patient-notes"
+                  name="notes"
+                  rows="3"
+                  placeholder="Share any symptoms, sensitivity, or if you feel nervous about dental visits..."
+                ></textarea>
+              </div>
+
+              <p class="form-error" id="form-error" role="alert" hidden>
+                Please enter your name and phone number so our reception team can reach you.
+              </p>
+
+              <div class="appointment-form__actions">
+                <button type="submit" class="btn btn--primary btn--full">
+                  <span>Continue Request with Riya</span>
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                    <path d="M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </div>
+
+              <p class="appointment-form__disclaimer">
+                Requests are collected by Riya and reviewed by our clinic coordinator. Your slot is confirmed once our desk verifies clinician availability.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. REFINED EDITORIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <div class="brand brand--light">
+            <img src="./assets/mascot-riya.svg" alt="Riya mascot" width="40" height="40" />
+            <div class="brand__text">
+              <span class="brand__name">Smile Dental Clinic, Pune</span>
+              <span class="brand__location">Calm, Contemporary Dental Care · Demo Concept</span>
+            </div>
+          </div>
+          <p class="site-footer__summary">
+            An architectural dental clinic showcase built for independent dental practices in India, paired with Riya—a live 24/7 AI dental receptionist powered by n8n.
+          </p>
+        </div>
+
+        <div class="site-footer__nav-cols">
+          <div class="footer-col">
+            <h2 class="footer-col__heading">Explore</h2>
+            <ul>
+              <li><a href="#philosophy">Our Philosophy</a></li>
+              <li><a href="#treatments">Treatments &amp; Care</a></li>
+              <li><a href="#doctor">Clinical Team</a></li>
+              <li><a href="#journey">Patient Journey</a></li>
+              <li><a href="#spaces">Studio Spaces</a></li>
+              <li><a href="#faq">Common Questions</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-col__heading">Treatments</h2>
+            <ul>
+              <li><a href="#treatments" data-trigger-tab="general">General Dentistry</a></li>
+              <li><a href="#treatments" data-trigger-tab="cleaning">Ultrasonic Teeth Cleaning</a></li>
+              <li><a href="#treatments" data-trigger-tab="cosmetic">Cosmetic Smile Design</a></li>
+              <li><a href="#treatments" data-trigger-tab="implants">Guided Dental Implants</a></li>
+              <li><a href="#treatments" data-trigger-tab="ortho">Clear Aligners</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h2 class="footer-col__heading">AI Receptionist</h2>
+            <p class="footer-col__note">
+              Riya is online 24/7 in the bottom-right corner to answer questions and log appointment requests.
+            </p>
+            <button type="button" class="btn btn--teal-light btn--sm" data-open-chat>
+              Chat with Riya
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>
+          &copy; 2026 Smile Dental Clinic, Pune (Fictional Demo Brand). All clinical details, address, and contact numbers are illustrative portfolio placeholders.
+        </p>
+        <p class="site-footer__tech">
+          Powered by live <code>@n8n/chat</code> webhook integration.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING @n8n/chat WIDGET MOUNT (mode: 'window') -->
+  <div id="n8n-chat" aria-label="Chat with Riya, AI dental receptionist"></div>
+
+  <script type="module" src="./assets/js/main.js"></script>
+  <script type="module" src="./assets/js/chat.js"></script>
 </body>
 </html>
