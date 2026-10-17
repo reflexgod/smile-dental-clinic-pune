@@ -27,6 +27,18 @@ function formatTime(date = new Date()) {
 function isChatWindowOpen() {
   const win = document.querySelector('#n8n-chat .chat-window');
   if (!win) return false;
+
+  // When @n8n/chat closes the window, Vue's <Transition name="chat-window-transition">
+  // immediately adds the leave classes while keeping display != 'none' until the
+  // CSS transition finishes, and then sets style="display: none;".
+  if (
+    win.classList.contains('chat-window-transition-leave-from') ||
+    win.classList.contains('chat-window-transition-leave-active') ||
+    win.classList.contains('chat-window-transition-leave-to')
+  ) {
+    return false;
+  }
+
   const inlineDisplay = win.style.display;
   const computedDisplay = window.getComputedStyle(win).display;
   return inlineDisplay !== 'none' && computedDisplay !== 'none';
@@ -52,7 +64,8 @@ function setChatWindowOpen(shouldOpen) {
   if (shouldOpen !== currentlyOpen) {
     toggleBtn.click();
   }
-  syncLauncherState();
+  requestAnimationFrame(syncLauncherState);
+  setTimeout(syncLauncherState, 40);
   if (shouldOpen) {
     setTimeout(() => {
       const textarea = document.querySelector('#n8n-chat .chat-input textarea');
@@ -67,7 +80,9 @@ function syncLauncherState() {
   if (!toggleBtn) return;
 
   const open = isChatWindowOpen();
-  toggleBtn.classList.toggle('is-open', open);
+  if (toggleBtn.classList.contains('is-open') !== open) {
+    toggleBtn.classList.toggle('is-open', open);
+  }
   setAttrIfChanged(toggleBtn, 'aria-expanded', String(open));
   setAttrIfChanged(
     toggleBtn,
@@ -105,7 +120,9 @@ function decorateFloatingWidget() {
       toggleBtn.appendChild(launcherMarkup);
 
       toggleBtn.addEventListener('click', () => {
+        requestAnimationFrame(syncLauncherState);
         setTimeout(syncLauncherState, 40);
+        setTimeout(syncLauncherState, 360);
       });
 
       toggleBtn.addEventListener('keydown', (event) => {
@@ -320,7 +337,12 @@ function initRiyaChat() {
     const observer = new MutationObserver(() => {
       decorateFloatingWidget();
     });
-    observer.observe(root, { childList: true, subtree: true });
+    observer.observe(root, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ['style', 'class'],
+    });
   }
 
   setTimeout(decorateFloatingWidget, 60);
