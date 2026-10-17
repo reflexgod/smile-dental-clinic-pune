@@ -1,0 +1,5 @@
+_site/
+assets/images/src/
+node_modules/
+.DS_Store
+Thumbs.db
